@@ -57,9 +57,14 @@ function main(sel)
 			return 1
 		end;
 
-Say("ThÇn hµnh phï ®i ®Õn n¬i ®­îc chØ ®Şnh..!!!", 7,
-		"Th«n trang - Thµnh thŞ - M«n ph¸i - CLD/gototown",
+Say("ThÇn hµnh phï ®i ®Õn n¬i ®­îc chØ ®Şnh..!!!", 9,
+
+		--"Th«n trang - Thµnh thŞ - M«n ph¸i/gototown",
+		"Thµnh thŞ /gopos_step2town",
+		"Th«n trang/#gopos_step2(8)",
 		"Maps luyÖn c«ng/gotoluyencong",
+		"M«n ph¸i/#gopos_step2(9)",
+
 		"ThiÕt ®Æt ®iÓm håi sinh./set_backpos",
 		"§i lµm [Ho¹t ®«ng]./vitri_khac",
 		"§i Minh NguyÖt TrÊn - §µo Hoa §¶o./#tbVNGWORDPOS:GotoOtherMap()",
@@ -468,7 +473,14 @@ function gotoluyencong()
 	local tab_Content = {
 		"B¶n ®å cÊp 90/#gopos_step2lv90()",
 		"B¶n ®å cÊp trªn 90/#gopos_step2lv90x()",
-		"B¶n ®å LuyÖn c«ng cña t©n thñ./#luyencongtanthu()",
+		--"B¶n ®å LuyÖn c«ng cña t©n thñ./#luyencongtanthu()",
+		"B¶n ®å cÊp 20 /gopos_step2lv20",
+		"B¶n ®å cÊp 30 /gopos_step2lv30",
+		"B¶n ®å cÊp 40 /gopos_step2lv40",
+		"B¶n ®å cÊp 50 /gopos_step2lv50",
+		"B¶n ®å cÊp 60 /gopos_step2lv60",
+		"B¶n ®å cÊp 70 /gopos_step2lv70",
+		"B¶n ®å cÊp 80 /gopos_step2lv80",
 		"Rêi khái/no",
 
 	}
@@ -477,13 +489,13 @@ end;
 
 function luyencongtanthu()
 	local tab_Content = {
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 20 /gopos_step2lv20",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 30 /gopos_step2lv30",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 40 /gopos_step2lv40",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 50 /gopos_step2lv50",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 60 /gopos_step2lv60",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 70 /gopos_step2lv70",
-		"Di chuyÓn ®Õn b¶n ®å luyÖn c«ng cÊp 80 /gopos_step2lv80",
+		"B¶n ®å cÊp 20 /gopos_step2lv20",
+		"B¶n ®å cÊp 30 /gopos_step2lv30",
+		"B¶n ®å cÊp 40 /gopos_step2lv40",
+		"B¶n ®å cÊp 50 /gopos_step2lv50",
+		"B¶n ®å cÊp 60 /gopos_step2lv60",
+		"B¶n ®å cÊp 70 /gopos_step2lv70",
+		"B¶n ®å cÊp 80 /gopos_step2lv80",
 		"Ta ch­a muèn ®i ®©u c¶./no",
 	}
 	Say("Lùa chän b¶n ®å luyÖn c«ng cÇn thiÕt.", getn(tab_Content), tab_Content);
