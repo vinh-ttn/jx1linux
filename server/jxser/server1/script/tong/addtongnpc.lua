@@ -129,7 +129,7 @@ jijiu_city={
 
 
 function add_tongnpc()
-	if (GetProductRegion() == "cn_ib") then
+	--if (GetProductRegion() == "cn_ib") then
 		-- 加城市祭酒
 		for i = 1, getn(jijiu_city) do
 			local SId = SubWorldID2Idx(jijiu_city[i][2]);
@@ -146,8 +146,8 @@ function add_tongnpc()
 				add_one_allbuilding(SId, aDynMapCopy[i]);
 			end
 		end
-		return
-	end;
+		--return
+	--end;
 	
 	add_citytong_npc();	--加帮会公共地图、模板地图npc
 	add_tongbuilding();	--加帮会公共地图建筑

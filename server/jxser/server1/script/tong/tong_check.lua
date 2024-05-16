@@ -20,8 +20,8 @@ function tong_check_add()
 end
 
 function tong_check_create()
-	if(GetLevel() < 80)then
-		Talk(1,"","LËp bang yªu cÇu ®¶ng cÊp 80 trë lªn")
+	if(GetLevel() < 60)then
+		Talk(1,"","LËp bang yªu cÇu ®¶ng cÊp 60 trë lªn")
 		return
 	end
 	-- local nTransLifeCount = ST_GetTransLifeCount()	
