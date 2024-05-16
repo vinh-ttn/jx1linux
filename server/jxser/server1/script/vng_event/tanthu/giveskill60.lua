@@ -129,15 +129,26 @@ end
 
 function tbGiveSkill60:GetSkillSupport()
 	-- body
-	if (GetSkillState(1594) > 0) then
-		return Talk(1, "", "Trªn ng­êi ®¹i hiÖp kh«ng ph¶i ®· cã kÜ n¨ng nµy råi hay sao?")
-	end
-	if(GetLevel() > 60)then
-		return Talk(1, "", "Hç trî nµy chØ dµnh cho t©n thñ d­íi cÊp 60")
+	--if (GetSkillState(440) > 0) then
+	--	return Talk(1, "", "Trªn ng­êi ®¹i hiÖp kh«ng ph¶i ®· cã kÜ n¨ng nµy råi hay sao?")
+	--end
+	--if (GetSkillState(987) > 0) then
+	--	return Talk(1, "", "Trªn ng­êi ®¹i hiÖp kh«ng ph¶i ®· cã kÜ n¨ng nµy råi hay sao?")
+	--end
+	if(GetLevel() > 90)then
+		return Talk(1, "", "Hç trî nµy chØ dµnh cho t©n thñ d­íi cÊp 90")
 	end
 	--AddSkillState(1594, 1, 1, 1555200 *1095 , 1) 
-	AddSkillState(1594, 1, 1, 64800*8 , 1) --8 giê
+	--AddSkillState(1594, 1, 1, 64800*8 , 1) --8 giê
 	--(60*18)*--> 1phut ==> (60*18)*60=1h
+	--AddSkillState(440,1,1,64800*8,1)	
+	--AddSkillState(987,1,1,64800*8,1)
+
+	AddSkillState(440, 1, 1, 64800*8,1) -- Tiªn Th¶o Lé
+	AddSkillState(987, 1, 1, 64800*8,1) -- kinh nghiem x2
+	AddSkillState(450, 20, 1, 32400) -- QuÕ Hoa Töu
+	AddSkillState(503, 20, 1, 32400) -- Mong diep
+	AddSkillState(963, 1, 0, 18*3)   -- vong bao ve
 
 	Msg2Player("B¹n nhËn phÇn th­ëng thµnh c«ng")
 end
@@ -209,6 +220,9 @@ function tbGiveSkill60:GetBK90( )
 			tinsert(tbSay,"C«n l«n ®ao./#ChonBiKipOK(50)")
 			tinsert(tbSay,"C«n l«n kiÕm./#ChonBiKipOK(51)")
 			tinsert(tbSay,"C«n l«n bïa./#ChonBiKipOK(52)")
+		elseif GetLastFactionNumber() == 10 then
+			tinsert(tbSay,"Hoa S¬n KiÕm T«ng./#ChonBiKipOK(4062)")
+			tinsert(tbSay,"Hoa S¬n KhÝ T«ng./#ChonBiKipOK(4063)")
 		end
 			tinsert(tbSay,"§Ó sau ®i./no")
 			Say("B©y giê ®¹i hiÖp chän theo ý m×nh", getn(tbSay), tbSay)
