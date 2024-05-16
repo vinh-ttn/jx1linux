@@ -47,7 +47,15 @@ SKILLS={
 	binglan_xuanjing={ --冰兰玄晶
 		coldres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
 		coldresmax_p={{{1,-1},{25,-15},{26,-15}},{{1,18*20},{20,18*90}}},
-		skill_cost_v={{{1,10},{20,60}}}
+		anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
+		skill_cost_v={{{1,10},{20,60}}},
+		skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_desc=
+		function(level)
+			return 
+			"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.binglan_xuanjing.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		end,
 	},
 	xuedao_dusha={ --血刀毒杀
 		physicsenhance_p={{{1,15},{20,65}}},
@@ -76,7 +84,15 @@ SKILLS={
 	jiutian_kuanglei={ --九天狂雷
 		lightingres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
 		lightingresmax_p={{{1,-1},{25,-15},{26,-15}},{{1,18*20},{20,18*90}}},
-		skill_cost_v={{{1,10},{20,60}}}
+		anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
+		skill_cost_v={{{1,10},{20,60}}},
+		skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_desc=
+		function(level)
+			return 
+			"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.jiutian_kuanglei.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		end,
 	},
 	youming_kulou={ --幽冥骷髅
 		poisondamage_v={{{1,11},{20,40}},{{1,60},{20,60}},{{1,10},{20,10}}},
@@ -102,23 +118,49 @@ SKILLS={
 		skill_cost_v={{{1,40},{20,40}}}
 	},
 	wuxing_gu={ --无形蛊
-		fastwalkrun_p={{{1,-10},{25,-50},{26,-50}},{{1,18*2},{20,18*2}}}
-		
+		--fastwalkrun_p={{{1,-10},{25,-50},{26,-50}},{{1,18*2},{20,18*2}}},
+		poisondamage_v={{{1,1},{20,20},{21,20}},{{1,18*20},{20,18*90}}},
+		--anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
 	},
 	chiyan_shitian={ --赤炎蚀天
 		fireres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
 		fireresmax_p={{{1,-1},{25,-15},{26,-15}},{{1,18*20},{20,18*90}}},
-		skill_cost_v={{{1,10},{20,60}}}
+		anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
+		skill_cost_v={{{1,10},{20,60}}},
+		skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		skill_desc=
+		function(level)
+			return 
+			"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.chiyan_shitian.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		end,
 	},
 	chuanxin_duci={ --穿心毒刺
-		poisonres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
-		poisonresmax_p={{{1,-1},{30,-20},{31,-20}},{{1,18*20},{20,18*90}}},
-		skill_cost_v={{{1,10},{20,60}}}
+       poisonresmax_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
+		--poisonres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
+		--poisonresmax_p={{{1,-1},{30,-20},{31,-20}},{{1,18*20},{20,18*90}}},
+		--anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
+		skill_cost_v={{{1,10},{20,60}}},
+		--skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_desc=
+		--function(level)
+			--return 
+			--"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.chuanxin_duci.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		--end,
 	},
 	wangu_shixin={ --万蛊蚀心
-		--poisontimereduce_p={{{1,-100},{20,-200}},{{1,18*45},{20,18*120}}},
-		poisontimereduce_p={{{1,-105},{20,-300},{21,-300}},{{1,18*45},{20,18*120}}},
-		skill_cost_v={{{1,40},{20,40}}}
+		poisontimereduce_p={{{1,-1000},{20,-2000}},{{1,18*45},{20,18*120}}},
+		--poisontimereduce_p={{{1,-105},{20,-300},{21,-300}},{{1,18*45},{20,18*120}}},
+		--anti_block_rate_buff={{{1,1},{2,1}},{{1,18*45},{20,18*120}}},
+		skill_cost_v={{{1,40},{20,40}}},
+		--skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_desc=
+		--function(level)
+			--return 
+			--"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.wangu_shixin.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		--end,
 	},
 	tiangang_disha={ --天罡地杀
 		seriesdamage_p={{{1,10},{20,50},{21,52}}},
@@ -166,6 +208,7 @@ SKILLS={
 		--poisonenhance_p={{{1,1},{30,15},{31,15}},{{1,-1},{2,-1}}},--新增属性毒发间隔减少
 		deadlystrikeenhance_p={{{1,4},{30,45}},{{1,-1},{2,-1}}},
 		lifemax_yan_p={{{1,80},{20,80},{36,80}},{{1,-1},{30,-1}}},	--最大生命值（阳）改为80% 20160801
+		lifemax_p={{{1,80},{20,80},{36,80}},{{1,-1},{30,-1}}},
 		--lifemax_yan_p={{{1,21},{35,20},{36,20}},{{1,-1},{30,-1}}},
 		--castspeed_v={{{1,1},{38,20},{39,21}},{{1,-1},{30,-1}}},
 		anti_do_stun_p={{{1,1},{39,20},{40,20}},{{1,-1},{10,-1}}},
@@ -178,7 +221,11 @@ SKILLS={
 		{
 			{{1,1},{30,30},{31,30}},
 			{{1,-1},{20,-1}}
-		}
+		},
+		anti_block_rate={{{1,1},{30,30},{31,30}},{{1,-1},{2,-1}}},
+		anti_hitrecover={{{1,0},{39,0},{40,15},{41,15}},{{1,-1},{2,-1}}},
+		returnres_p={{{1,1},{20,20},{21,20}},{{1,-1},{2,-1}}},
+		fastwalkrun_p={{{1,1},{50,50},{51,50}},{{1,-1},{2,-1}}},
 	},
 	baidu_chuanxin={ --百毒穿心
 		physicsenhance_p={{{1,10},{20,95}}}, 
@@ -256,7 +303,7 @@ SKILLS={
 		seriesdamage_p={{{1,40},{15,40},{20,80},{21,82}}},
 		--poisondamage_v={{{1,20},{15,50},{20,121}},{{1,60},{20,60}},{{1,10},{20,10}}},
 		--poisondamage_v={{{1,25},{15,100},{20,215},{23,353},{26,422}},{{1,60},{20,60}},{{1,10},{20,10}}},
-		poisondamage_v={{{1,30},{15,175},{20,315},{23,550},{26,652}},{{1,60},{20,60}},{{1,10},{20,10}}},
+		poisondamage_v={{{1,35},{10,350},{50,1750},{51,1750}},{{1,10},{20,10}}},
 		skill_attackradius={{{1,448},{20,480},{21,480}}},
 		skill_cost_v={{{1,35},{20,100},{23,120}}},
 		skill_eventskilllevel={{{1,1},{20,20}}},
@@ -353,7 +400,7 @@ SKILLS={
 	daowudu150={ --刀五毒150
 		seriesdamage_p={{{1,40},{15,40},{20,80},{21,82}}},
 		--physicsenhance_p={{{1,18},{15,95},{20,208},{23,343},{26,411}}},
-		physicsenhance_p={{{1,23},{15,165},{20,308},{23,458},{26,541}}},
+		physicsenhance_p={{{1,30},{10,300},{20,600},{30,900},{50,1500},{51,1500}}},
 		--poisondamage_v={{{1,20},{15,30},{20,60}},{{1,60},{20,60}},{{1,10},{20,10}}},
 		poisondamage_v={{{1,24},{15,72},{20,144},{23,230},{26,273}},{{1,60},{20,60}},{{1,10},{20,10}}},
 		missle_speed_v={{{1,28},{20,30},{21,30}}},
@@ -410,12 +457,21 @@ SKILLS={
 		allres_yan_p={{{1,-1},{20,-15},{21,-15}},{{1,18*20},{20,18*90}}},
 		--allresmax_p={{{1,-1},{20,-10},{21,-10}},{{1,18*20},{20,18*90}}},
 		allresmax_p={{{1,-1},{20,-25},{21,-25}},{{1,18*20},{20,18*90}}},
+		anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
 		skill_cost_v={{{1,60},{20,120}}}
 	},
 	chuanyi_pojia={ --穿衣破甲
-		physicsres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
-		physicsresmax_p={{{1,-1},{20,-15},{20,-15}},{{1,18*20},{20,18*90}}},
-		skill_cost_v={{{1,10},{20,60}}}
+		--physicsres_yan_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
+		physicsresmax_p={{{1,-1},{20,-20},{21,-20}},{{1,18*20},{20,18*90}}},
+		--anti_block_rate_buff={{{1,1},{2,1}},{{1,18*20},{20,18*90}}},
+		skill_cost_v={{{1,10},{20,60}}},
+		--skill_mintimepercastonhorse_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_mintimepercast_v={{{1,8*18},{20,6*18},{25,5*18},{30,4*18},{35,3*18},{36,3*18}}},
+		--skill_desc=
+		--function(level)
+			--return 
+			--"Th阨 gian kh玦 ph鬰 chi猽 th鴆: <color=orange>"..floor(Link(level,SKILLS.chuanyi_pojia.skill_mintimepercast_v[1]) / 18).." gi﹜<color>\n"
+		--end,
 	},
 	wudu120={ --五毒120技能
 		autoattackskill={{{1,719*256 + 1},{20,719*256 + 20},{21,719*256 + 21}},{{1,-1},{20,-1}},{{1,10*18*256 + 1},{20,10*18*256 + 30},{21,10*18*256 + 30}}},
