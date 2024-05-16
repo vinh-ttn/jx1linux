@@ -56,9 +56,15 @@ function main(sel)
 		return 1
 	end;
 
-Say("ThÇn hµnh phï ®i ®Õn n¬i ®­îc chØ ®Þnh..!!!", 7,
-		"Th«n trang - Thµnh thÞ - M«n ph¸i/gototown",
+
+Say("ThÇn hµnh phï ®i ®Õn n¬i ®­îc chØ ®Þnh..!!!", 9,
+
+		--"Th«n trang - Thµnh thÞ - M«n ph¸i/gototown",
+		"Thµnh thÞ /gopos_step2town",
+		"Th«n trang/#gopos_step2(8)",
 		"Maps luyÖn c«ng/goto_luyencong",
+		"M«n ph¸i/#gopos_step2(9)",
+
 		"ThiÕt ®Æt ®iÓm håi sinh./set_backpos",
 		"§i lµm [Ho¹t ®«ng]./vitri_khac",
 		"T×m boss hoµng kim/timbosshk",
@@ -586,7 +592,7 @@ tbMapTrain = {
 
 function goto_luyencong()
 	--dofile("/script/item/ib/shenxingfu.lua");
-	local tab_Content = {
+	local tab_Content = { 
 		"B¶n ®å cÊp 10/#goto_luyencong2(10,getn(tbMapTrain[10]))", --
 		"B¶n ®å cÊp 20/#goto_luyencong2(20,getn(tbMapTrain[20]))",
 		"B¶n ®å cÊp 30/#goto_luyencong2(30,getn(tbMapTrain[30]))",
@@ -598,11 +604,11 @@ function goto_luyencong()
 		"B¶n ®å cÊp 90/#goto_luyencong2(90,getn(tbMapTrain[90]))",
 		"B¶n ®å cÊp 100/#goto_luyencong2(100,getn(tbMapTrain[100]))",
 		"B¶n ®å cÊp 110/#goto_luyencong2(110,getn(tbMapTrain[110]))",
-		"Tho¸t/no",
+		"Tho¸t/no", 
 	}
 	Say("ThÇn hµnh phï, ®i ®Õn n¬i ng­¬i muèn.", getn(tab_Content), tab_Content);
 end
-
+ 
 function goto_luyencong2(num1,num2,num3)
 	local tab_Content = {};
 	if num2 > 8 then
@@ -654,7 +660,7 @@ function goto_luyencong3(num1,num2)
 	Msg2Player("Xin h·y ngåi yªn, chóng ta ®i ®Õn <color=yellow>"..mapName.."<color> nµo");
 	SetProtectTime(18*3)
 	AddSkillState(963, 1, 0, 18*3)
-end
+end 
 
 function gopos_step2town()
 	local tab_Content = {
