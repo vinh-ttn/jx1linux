@@ -7,7 +7,7 @@ tbCD_MAP = {516, 517, 580, 581}	--烽火连城守城地图
 
 function main(nItemIdx)
 
---	W,X,Y = GetWorldPos();
+	W,X,Y = GetWorldPos();
 	nMapId = SubWorldIdx2MapCopy(SubWorld)
 	for i = 1, getn(tbBATTLEMAP) do 
 		if ( nMapId == tbBATTLEMAP[i] ) then

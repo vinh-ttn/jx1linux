@@ -26,7 +26,7 @@ tbCaiPiao.TSK_USE_GENGYIN	= 4
 tbCaiPiao.TSK_USE_GENGYIN_DATE	= 5
 
 --任务变量
-tbCaiPiao.tbTicket = {szName="Canh D莕 H錸g Bao", tbProp={6, 1, 2250, 1, 0, 0}, nExpiredTime = 20100322}
+tbCaiPiao.tbTicket = {szName="Canh D莕 H錸g Bao", tbProp={6, 1, 2250, 1, 0, 0}, nExpiredTime = 20200322}
 
 
 function tbCaiPiao:CommonLimit()
@@ -147,6 +147,7 @@ function tbCaiPiao:WagerCallBack(nResult)
 end
 
 --function tbCaiPiao:PersonQuery()
+
 --	local handle = OB_Create()
 --	ObjBuffer:PushObject(handle, GetName())	
 --	self:RemoteExecute(PlayerIndex, "tbCaiPiao_PersonQuery", handle, "tbCaiPiao_PersonQuery_CallBack")

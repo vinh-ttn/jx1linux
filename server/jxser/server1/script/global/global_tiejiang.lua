@@ -6,7 +6,9 @@ Include("\\script\\task\\newtask\\education\\jiaoyutasknpc.lua")
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\global\\×ÏÉ«¼°»Æ½ð×°±¸ÖýÔì.lua")
 Include("\\script\\global\\shenmi_chapman.lua");	--ÐÞ×°±¸¹¦ÄÜ
-Include("\\script\\global\\equip_system.lua"); -- TÝnh n¨ng: ChÕ t¹o ®å tÝm vµ hkmp
+
+
+
 Include("\\script\\activitysys\\npcdailog.lua")
 Include("\\script\\misc\\eventsys\\type\\npc.lua")
 
@@ -44,12 +46,17 @@ function tiejiang_city(...)
 	
 	
 	tbDailog.szTitleMsg = gsub(tbDailog.szTitleMsg, "<dec>", "")
+	
+	
 	tbDailog:AddOptEntry("Giao dÞch", yes);
 	--tbDailog:AddOptEntry("Cöa hµng tinh lùc", energy_sale);
-	tbDailog:AddOptEntry("VËt phÈm ®óc", onFoundry);
-	--tbDailog:AddOptEntry("VËt phÈm kh¶m n¹m", jewel_yes);
+	tbDailog:AddOptEntry("Giao dÞch", yes);
+	
+	--tbDailog:AddOptEntry("VËt phÈm ®óc", onFoundry);
+	
+	tbDailog:AddOptEntry("VËt phÈm kh¶m n¹m", jewel_yes);
 	tbDailog:AddOptEntry("Xö lý <trang bÞ ®· bÞ háng>", deal_brokenequip);
-	--tbDailog:AddOptEntry("Ta ®Õn nhËn nhiÖm vô S¬ nhËp", education_tiejiang);	
+	tbDailog:AddOptEntry("Ta ®Õn nhËn nhiÖm vô S¬ nhËp", education_tiejiang);	
 	--tbDailog:AddOptEntry("Nh©n tiÖn ghÐ qua th«i", no, {});
 	tbDailog:Show()
 end;
@@ -61,9 +68,9 @@ function tiejiang_village(...)
 		"Giao dÞch/yes",
 		
 		--Change request 04/06/2011, ®ãng chÕ t¹o trang bÞ b¹ch kim - Modified by DinhHQ - 20110605
-		"VËt phÈm ®óc/onFoundry",
+		--"VËt phÈm ®óc/onFoundry",
 		
-		--"Ta ®Õn nhËn nhiÖm vô S¬ nhËp/tboss",
+		"Ta ®Õn nhËn nhiÖm vô S¬ nhËp/tboss",
 		"Nh©n tiÖn ghÐ qua th«i/no",
 	};
 	
@@ -98,6 +105,11 @@ end;
 function energy_sale()
 	CreateStores();
 	AddShop2Stores(174, "Cöa hµng tinh lùc", 15, 100, "fBuyCallBack(%d,%d)");
+	AddShop2Stores(179,"Ho¹t ®éng cöa hµng ", 1, 100, "fBuyCallBack(%d,%d)"); 
+	AddShop2Stores(93,"Phóc duyªn cöa hµng ", 2, 100, "fBuyCallBack(%d,%d)"); 
+	AddShop2Stores(98,"Tèng kim cöa hµng ", 4, 100, "fBuyCallBack(%d,%d)"); 
+	AddShop2Stores(146,"Vinh dù cöa hµng ", 11, 100, "fBuyCallBack(%d,%d)"); 
+	AddShop2Stores(173,"Uy väng cöa hµng ", 13, 100, "fBuyCallBack(%d,%d)"); 
 	OpenStores();
 end
 

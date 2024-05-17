@@ -10,18 +10,18 @@ Include("\\script\\misc\\eventsys\\type\\map.lua")
 --所有数据放到这个表里
 tbFruitData = {
 	N_FRUIT_START_DATE = 2011042800,--活动开始日期
-    N_FRUIT_END_DATE = 2011052900,--活动结束日期(含)
+    N_FRUIT_END_DATE = 2021052900,--活动结束日期(含)
     SZ_FRUIT_MAP_NAME = "Chi課 Long чng",
     N_FRUIT_MAP_ID = 959,
     --生长黄金之果的位置
     TB_FRUIT_POS = 
     {
---    	{959,1437,3057},
---    	{959,1477,3084},
---    	{959,1458,3066},
+   	{959,1437,3057},
+   	{959,1477,3084},
+    	{959,1458,3066},
     },
     --生长黄金之果的时间
-    TB_FRUIT_TIME = {1315, 1335, 1050, 1100, 1900, 1920},
+    TB_FRUIT_TIME = {1315, 1335, 1900, 1920},
     --server start的时候，根据TB_FRUIT_TIME生成
     TB_FRUIT_TIME_MAP = {},--{[1315]=1, [1335]=1, [1900]=1, [1920]=1}
     
@@ -207,6 +207,7 @@ function _ShowSeed(worldidx, mapid, seedlevel, count, tbPos ,szMapName, nBatch)
             		--nBeginNumber = nBeginNumber + 1
 					--gb_SetTask("辉煌之种",12,nBeginNumber)
 					SetNpcParam(nNpcIndex, 1, seedlevel);
+					SetNpcTimer(nNpcIndex, 30*60*18)
 					--SetNpcParam(nNpcIndex, 2, nBeginNumber*10000 +  nCurDate ); --  nCurDate --加上当前日期
 					if szNpcName == szGoldFruitName or szNpcName == szGoldSeedName then
 						Msg2SubWorld("<color=yellow>"..szNpcName.."<color>".." xu蕋 hi謓 t筰 "..szMapName.."("..floor(nPosX / 8)..","..floor(nPosY / 16)..").")

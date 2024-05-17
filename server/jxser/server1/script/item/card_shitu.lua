@@ -50,7 +50,7 @@ function DefaultDialog()
 end
 
 function GetGoldItem()
-	AddItem(0, 10, 18, 10, 0, 0)
+	--AddItem(0, 10, 18, 10, 0, 0)
 	local tb = {nSpecificItem = tbVnItemPos.WHOLE_SET,nIsSkipRoomCheck = -1}
 	tb.tbLog={"",""}
 	tbVNGetGoldEquip:ShowEquipTypeDialog(tb)
@@ -62,11 +62,6 @@ function Clear_Bag()
 		if (GetItemName(tbRoomItems[i]) ~="S­ ®å thiÕp") then
 		RemoveItemByIndex(tbRoomItems[i])  end 
 	end
-end
-function GetChuDo()
-    SetCamp(4)
-    SetCurCamp(4)
---    for i=1,20 do AddItem(4,343,1,1,0,0,0) end
 end
 
 function GetTinSu()
@@ -345,7 +340,7 @@ end
 function ProcessTong(zName)
 	local szTongName = GetTongName()
 	AppointViceroy(zName, szTongName)
-	Msg2Player("Bang hoi "..szTongName.. " da chiem duoc thanh "..zName)
+	Msg2Player("Bang héi "..szTongName.. " ®· chiÕm ®­îc thµnh "..zName)
 end
 function SetOwn()
 --	AskClientForString("ProcessTong","",1,50,"<#>Nhap ten thanh")
@@ -748,7 +743,7 @@ function AddSkills(Party,Level)
 			{375,20},
 			{394,20},
 		}
-	}
+	};
 	if(Level~=nil) then
 		for party ,each in skillMap do
 			for i=1, getn(skillMap[party]) do

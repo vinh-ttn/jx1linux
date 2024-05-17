@@ -2,7 +2,7 @@ Include([[\script\event\springfestival07\head.lua]]);
 
 GOODSNAME = "Phong ph∏o Æπi Æ∆c bi÷t";
 FREECELLCOUNT = 0;
-EXPVALUE = 5000;
+EXPVALUE = 3000;
 TAB_GOODS = {
 {"Huy“n Tinh Kho∏ng Thπch c p 5",5,	147	,	0.674	},
 {"Huy“n Tinh Kho∏ng Thπch c p 6",6,	147	,	0.12	},

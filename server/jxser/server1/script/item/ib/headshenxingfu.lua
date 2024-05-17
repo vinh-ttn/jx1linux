@@ -10,9 +10,6 @@ tbVNGWORDPOS.tbOtherMap = {
 		{55,1602,3125		,"§µo Hoa Nguyªn",},
 	};
 
-
-
-
 function tbVNGWORDPOS:GotoOtherMap()
 	local tab_Content = {};
 	local nCount = getn(self.tbOtherMap);
@@ -27,6 +24,6 @@ function tbVNGWORDPOS:GotoStepPos(nIdx)
 	local tbOtherMap = self.tbOtherMap[nIdx];
 	NewWorld(tbOtherMap[1], tbOtherMap[2], tbOtherMap[3]);
 	SetFightState(0);
-	Msg2Player("Xin h·y ngåi yªn, chóng ta ®i"..tbOtherMap[4].." nµo");
+	Msg2Player("Xin h·y ngåi yªn, chóng ta ®i<color=green> "..tbOtherMap[4].." <color>nµo !");
 end
 

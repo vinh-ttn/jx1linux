@@ -184,7 +184,9 @@ end
 -- 设置离线托管技能
 function onSetUpgradeSkill(nUpgradeSkillID, funcCallBack)
 	SetTask(AEXP_SKILL_ID_TASKID, nUpgradeSkillID);
-	funcCallBack();
+	if funcCallBack~= nil then
+		funcCallBack();
+	end
 end
 
 -- 根据技能级别熟练度自动设置离线挂技能升级的技能ID

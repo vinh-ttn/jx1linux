@@ -12,8 +12,8 @@ end
 local tbActData = 
 {
 	nStartDate			= 20090619,--20090619,
-	nEndDate			= 20090719,
-	nComposeEndDate		= 20090719,
+	nEndDate			= 20290719,
+	nComposeEndDate		= 20290719,
 	
 	nMinLevel	= 50,
 	bIsCharged	= 1,

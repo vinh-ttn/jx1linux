@@ -139,7 +139,7 @@ allbrother_0801_tbItemList =
 	[135] =	{szName="Thóy Yªn Song ®ao", tbProp={6, 1, 41}},
 	[136] =	{szName="C¸i Bang Ch­ëng Ph¸p", tbProp={6, 1, 54}},
 	[137] =	{szName="C¸i Bang C«n ph¸p", tbProp={6, 1, 55}},
-	--[138] =	{szName="V©n Long KÝch. M©u ph¸p", tbProp={6, 1, 35}},
+	[138] =	{szName="V©n Long KÝch. M©u ph¸p", tbProp={6, 1, 35}},
 	[139] =	{szName="L­u Tinh. §ao ph¸p", tbProp={6, 1, 36}},
 	[140] =	{szName="NhiÕp Hån. Chó thuËt", tbProp={6, 1, 53}},
 	[141] =	{szName="Th¸i Cùc QuyÒn Phæ. QuyÓn 3", tbProp={6, 1, 33}},

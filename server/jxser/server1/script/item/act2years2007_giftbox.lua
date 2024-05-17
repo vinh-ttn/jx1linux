@@ -37,7 +37,7 @@ ACT2YEAR_TYellowBoxRan = {
         {6,1,28},
         {6,1,33},
         {6,1,34},
-        --{6,1,35},
+        {6,1,35},
         {6,1,36},
         {6,1,37},
         {6,1,38},
@@ -63,7 +63,7 @@ ACT2YEAR_TYellowBoxRan = {
         {6,1,59},
     },
     tItemName = {"ThiÕt La H¸n","HuyÒn Tinh Kho¸ng Th¹ch cÊp 2","HuyÒn Tinh Kho¸ng Th¹ch cÊp 3","HuyÒn Tinh Kho¸ng Th¹ch cÊp 4","Tö Thñy Tinh","B¸nh kem ®Æc biÖt","Tô TiÔn thuËt. B¹o Vò Lª Hoa",
-    "H·m TÜnh thuËt.Lo¹n Hoµn Kİch","Th¸i Cùc QuyÒn Phæ. QuyÓn 3","Th¸i Cùc KiÕm Phæ. QuyÓn 2","L­u Tinh. §ao ph¸p","Thiªn V­¬ng Chïy Ph¸p. QuyÓn 1",
+    "H·m TÜnh thuËt.Lo¹n Hoµn Kİch","Th¸i Cùc QuyÒn Phæ. QuyÓn 3","Th¸i Cùc KiÕm Phæ. QuyÓn 2","V©n Long Kİch. M©u ph¸p","L­u Tinh. §ao ph¸p","Thiªn V­¬ng Chïy Ph¸p. QuyÓn 1",
     "Thiªn V­¬ng Th­¬ng ph¸p. QuyÓn 2","Thiªn V­¬ng §ao ph¸p.QuyÓn 3","Thóy Yªn §ao ph¸p","Thóy Yªn Song ®ao","DiÖt KiÕm MËt TŞch","Nga Mi  PhËt Quang Ch­ëng MËt TŞch","Phi §ao thuËt. NhiÕp Hån NguyÖt ¶nh",
     "Phi Tiªu thuËt. Cöu Cung Phi Tinh","Ngò §éc Ch­ëng Ph¸p. QuyÓn 1","Ngò §éc §ao ph¸p. QuyÓn 2","Ngò §éc NhiÕp T©m thuËt. QuyÓn 3","Ngù Phong thuËt","Ngù L«i thuËt","Ngù T©m thuËt",
     "NhiÕp Hån. Chó thuËt","C¸i Bang Ch­ëng Ph¸p","C¸i Bang C«n ph¸p","ThiÕu L©m QuyÒn Ph¸p. QuyÓn 1","ThiÕu L©m C«n ph¸p. QuyÓn 2","ThiÕu L©m §ao ph¸p. QuyÓn 3","Phæ §é MËt TŞch" }

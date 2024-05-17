@@ -244,21 +244,21 @@ tbBetInfo.nTotalBet = 0;
 tbBetInfo.tbNormalNum = {};
 tbBetInfo.tbSpecNum = {};
 tbBetInfo.nStartDate = 20100709;
-tbBetInfo.nEndDate = 20100822;
+tbBetInfo.nEndDate = 20200822;
 tbBetInfo.tbNormalAward =
 {
 	-- §iÒu ChØnh Phó Quý CÈm Hép - Created by AnhHH  20110919
 	{nExp_tl = 20000000},
---	{szName="Kim Bµi", tbProp={6,1,1481,1,0,0}, nExpiredTime = 10080},
+	--{szName="Kim Bµi", tbProp={6,1,1481,1,0,0}, nExpiredTime = 20080},
 }
 tbBetInfo.tbSpecAward =
 {
 	-- §iÒu ChØnh Phó Quý CÈm Hép - Created by AnhHH  20110919
 	{nExp_tl = 200000000},
-	{szName="Tói May M¾n", tbProp={6,1,30111,1,0,0}, nExpiredTime = 1380},
---	{szName="Ngäc Bµi", tbProp={6,1,1482,1,0,0}, nExpiredTime = 10080},
---	{szName="NhÊt Kû Cµn Kh«n Phï", tbProp={6,1,2126,1,0,0}, nExpiredTime = 43200},
---	{szName="ThÇn Hµnh To¸i PhiÕn", tbProp={6,1,2410,1,0,0}, nCount=18, nExpiredTime = 20100823},
+	--{szName="Tói May M¾n", tbProp={6,1,30111,1,0,0}, nExpiredTime = 1380},
+	--{szName="Ngäc Bµi", tbProp={6,1,1482,1,0,0}, nExpiredTime = 20080},
+	{szName="NhÊt Kû Cµn Kh«n Phï", tbProp={6,1,2126,1,0,0}, nExpiredTime = 43200},
+	--{szName="ThÇn Hµnh To¸i PhiÕn", tbProp={6,1,2410,1,0,0}, nCount=18, nExpiredTime = 20200823},
 }
 
 function tbBetInfo:IsActive()
@@ -393,8 +393,8 @@ function tbBetInfo:Bet(nValue)
 
 	RemoteExecute("\\script\\event\\expansion\\201006\\fuguijinhe\\fuguijinhe.lua", "AddBetCount", 0);
 	
-	PlayerFunLib:AddExp(6000000,0,format("fuguijinhe\tbet number%d",nValue));
-	Msg2Player(format("§· chän <color=green>%d<color> ®ång thêi nhËn ®­îc %d kinh nghiÖm",nValue,6000000))
+	PlayerFunLib:AddExp(600000,0,format("fuguijinhe\tbet number%d",nValue));
+	Msg2Player(format("§· chän <color=green>%d<color> ®ång thêi nhËn ®­îc %d kinh nghiÖm",nValue,600000))
 	
 	return 1;
 end

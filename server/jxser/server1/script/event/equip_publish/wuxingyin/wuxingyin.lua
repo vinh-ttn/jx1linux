@@ -221,7 +221,6 @@ end
 
 -- ÐÞ¸ÄÉý¼¶ÖÐµÄÌáÊ¾µÀ¾ßÃû
 function tbWuxingyin:ComposeGiveUI()
-	do return end
 	
 	local szTitle = "N©ng cÊp Hoµng kim Ên"
 	local szContent = ""
@@ -268,10 +267,10 @@ function tbWuxingyin:Register()
 	
 	local p = tbWuxingyin:new(%tbFormulaList, "shengjiwuxingyin", INVENTORY_ROOM.room_giveitem)
 	
-	--tinsert(tbOpt, {"N©ng cÊp Hoµng kim Ên", p.ComposeGiveUI, {p}})
+	tinsert(tbOpt, {"N©ng cÊp Hoµng kim Ên", p.ComposeGiveUI, {p}})
 	tinsert(tbOpt, {"Hñy bá "})
-	--nItem2EquipRegId = pEventType:Reg("Thî rÌn trong thµnh", "N©ng cÊp Hoµng kim Ên", CreateNewSayEx, {szMsg, tbOpt})
+	nItem2EquipRegId = pEventType:Reg("Thî rÌn trong thµnh", "N©ng cÊp Hoµng kim Ên", CreateNewSayEx, {szMsg, tbOpt})
 end
 
 
-tbWuxingyin:Register()
+--tbWuxingyin:Register()

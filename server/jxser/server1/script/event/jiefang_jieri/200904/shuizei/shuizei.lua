@@ -4,10 +4,10 @@ Include("\\script\\lib\\awardtemplet.lua")
 Include("\\script\\activitysys\\g_activity.lua")
 tbjf0904_shuizei_exp =
 {
-	[1]	= {nExp = 30, 	nRate = 0.3},
-	[2]	= {nExp = 30, 	nRate = 0.4},
-	[3]	= {nExp = 30, 	nRate = 0.2},
-	[4]	= {nExp = 30, 	nRate = 0.05},
+	[1]	= {nExp = 10, 	nRate = 0.3},
+	[2]	= {nExp = 15, 	nRate = 0.4},
+	[3]	= {nExp = 20, 	nRate = 0.2},
+	[4]	= {nExp = 25, 	nRate = 0.05},
 	[5]	= {nExp = 30, 	nRate = 0.05},
 };
 
@@ -95,7 +95,7 @@ function give_shuizei_award_exp()
 		ncurstep = ncurstep + tbjf0904_shuizei_exp[i].nRate * 100000;
 	end
 	
-	AddOwnExp(naddedexp * 10000);
+	AddOwnExp(naddedexp * 1000000);
 	
 end
 

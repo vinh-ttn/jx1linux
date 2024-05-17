@@ -17,7 +17,7 @@ end
 function xmas2007_binger_about()
 local arytalk = 
 	{
-		[1]="<dec><npc>Tõ <color=red>08-12-2007 ®Õn 13-01-2008<color>, mçi ngµy trong thêi gian <color=red>8:00-9:00, 15:00-16:00, 22:00-23:00<color>, thiÕu n÷ gi¸ng sinh sÏ ngÉu nhiªn xuÊt hiÖn t¹i <color=yellow>ThÊt ®¹i thµnh thŞ hoÆc Tr­êng B¹ch S¬n Nam, Tr­êng B¹ch S¬n B¾c<color>. Sau khi hÖ thèng c«ng bè, vâ l©m nh©n sü cã thÓ ®Õn gÆp <color=yellow>B¨ng Nhi<color> ®Ó b¸o danh tham gia, vµ lÇn l­ît t×m c¸c thiÕu n÷ gi¸ng sinh <color=yellow>§«ng Nhi, B¹ch Nhi, TuyÕt Nhi<color>. Ba vŞ ®¹i hiÖp ®Çu tiªn t×m ®­îc hä cã thÓ ®Õn <color=yellow>TuyÕt Nhi<color> ®Ó nhËn th­ëng.",
+		[1]="<dec><npc>Tõ <color=red>08-12-2007 ®Õn 13-01-2020<color>, mçi ngµy trong thêi gian <color=red>8:00-9:00, 15:00-16:00, 22:00-23:00<color>, thiÕu n÷ gi¸ng sinh sÏ ngÉu nhiªn xuÊt hiÖn t¹i <color=yellow>ThÊt ®¹i thµnh thŞ hoÆc Tr­êng B¹ch S¬n Nam, Tr­êng B¹ch S¬n B¾c<color>. Sau khi hÖ thèng c«ng bè, vâ l©m nh©n sü cã thÓ ®Õn gÆp <color=yellow>B¨ng Nhi<color> ®Ó b¸o danh tham gia, vµ lÇn l­ît t×m c¸c thiÕu n÷ gi¸ng sinh <color=yellow>§«ng Nhi, B¹ch Nhi, TuyÕt Nhi<color>. Ba vŞ ®¹i hiÖp ®Çu tiªn t×m ®­îc hä cã thÓ ®Õn <color=yellow>TuyÕt Nhi<color> ®Ó nhËn th­ëng.",
 		[2]="Ha ha, ta hiÓu råi/main"
 	}	
 	CreateTaskSay(arytalk)
@@ -48,16 +48,28 @@ end
 
 function xmas2007_findgirl_checktime()
 	local ndate = tonumber(GetLocalDate("%y%m%d%H"))
-	if ndate < 07120800 or ndate > 08011324 then
-		return 0
-	end	
+	--if ndate < 07120800 or ndate > 08011324 then
+		--return 0
+	--end	
 	
 	local nhm = tonumber(GetLocalDate("%H%M"))
 	if nhm >= 800 and nhm < 920 then
 		return 1
-	elseif nhm >= 1500 and nhm < 1620 then
+	elseif nhm >= 1000 and nhm <= 1120 then
 		return 1
-	elseif nhm >= 2200 and nhm < 2320 then
+	elseif nhm >= 1200 and nhm <= 1320 then
+		return 1
+	elseif nhm >= 1400 and nhm <= 1520 then
+		return 1
+	elseif nhm >= 1600 and nhm <= 1720 then
+		return 1
+	elseif nhm >= 1800 and nhm <= 1920 then
+		return 1
+	elseif nhm >= 2100 and nhm <= 2220 then
+		return 1
+	elseif nhm >= 2200 and nhm <= 2320 then
+		return 1
+	elseif nhm >= 1500 and nhm <= 1620 then
 		return 1
 	else
 		return 0

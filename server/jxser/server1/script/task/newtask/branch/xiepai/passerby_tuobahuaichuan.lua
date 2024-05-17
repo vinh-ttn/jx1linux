@@ -76,7 +76,7 @@ function task_tuobahuaichuan()
 			else 
 				Talk(1,"Uworld1000_xfz88","Khi lµm nhiÖm vô gÆp vÊn ®Ò g×, cã thÓ Ên phİm <color=red>F12<color> ®Ó xem nhËt tr×nh. Trong ®ã chØ ghi l¹i c¸c b­íc mµ b¹n ®· thùc hiÖn qua!")
 			end
-		elseif (( Uworld1061 == 20 ) or ( Uworld1061 == 30 )) and ( Uworld1013 == 20 ) then
+		elseif (( Uworld1061 == 20 ) or ( Uworld1061 == 30 )) then
 			if ( GetLevel() >= 50 ) and ( GetLevel() <  60 ) then 
 				nt_setTask(1061,30)
 				Describe(

@@ -22,7 +22,7 @@ tab_sbook_list =
 	{28, "'H·m TÜnh thuËt. Lo¹n Hoµn KÝch' "},
 	{33, "Th¸i Cùc QuyÒn Phæ- QuyÓn 3 "},
 	{34, "'Th¸i Cùc KiÕm Phæ. QuyÓn 2' "},
-	--{35, "'V©n Long KÝch. M©u ph¸p' "},
+	{35, "'V©n Long KÝch. M©u ph¸p' "},
 	{36, "'L­u Tinh. §ao ph¸p' "},
 	{37, "'Thiªn V­¬ng Chïy Ph¸p. QuyÓn 1' "},
 	{38, "Thiªn V­¬ng Th­¬ng ph¸p- QuyÓn 2 "},

@@ -150,7 +150,7 @@ allbrother_0801_tbTaskList =
 	[136] = {nTaskType = 0, szShow = "Thu thËp Thóy Yªn song ®ao", tbList = {allbrother_0801_tbItemList[135]} },
 	[137] = {nTaskType = 0, szShow = "Thu thËp C¸i bang ch­ëng ph¸p", tbList = {allbrother_0801_tbItemList[136]} },
 	[138] = {nTaskType = 0, szShow = "Thu thËp C¸i bang c«n ph¸p", tbList = {allbrother_0801_tbItemList[137]} },
-	--[139] = {nTaskType = 0, szShow = "Thu thËp V©n Long kÝch (M©u ph¸p)", tbList = {allbrother_0801_tbItemList[138]} },
+	[139] = {nTaskType = 0, szShow = "Thu thËp V©n Long kÝch (M©u ph¸p)", tbList = {allbrother_0801_tbItemList[138]} },
 	[140] = {nTaskType = 0, szShow = "Thu thËp L­u tinh (§ao ph¸p)", tbList = {allbrother_0801_tbItemList[139]} },
 	[141] = {nTaskType = 0, szShow = "Thu thËp NhiÕp hån (Chó thuËt)", tbList = {allbrother_0801_tbItemList[140]} },
 	[142] = {nTaskType = 0, szShow = "Thu thËp Th¸i cùc quyÒn phæ quyÓn 3", tbList = {allbrother_0801_tbItemList[141]} },

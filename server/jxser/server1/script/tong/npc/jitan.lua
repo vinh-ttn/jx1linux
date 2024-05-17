@@ -76,13 +76,13 @@ end
 
 function main()
 	local nSubWorldId = SubWorldIdx2ID(SubWorld);
-	--if (GetProductRegion() == "cn_ib") then
+	if (GetProductRegion() == "cn_ib") then
 		-- 帮会地图模板中的祭酒则直接进入地图管理
 		if (aDynMapCopyName[nSubWorldId] ~= nil) then
 			tongmap_management();
 			return
 		end
-	--end;
+	end;
 	local _Name, nTongID = GetTongName();
 	-- 玩家没有帮会则不出现功能列表
 	if (nTongID == 0) then

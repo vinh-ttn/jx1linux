@@ -1,6 +1,14 @@
 Include([[\script\event\springfestival07\item\libcracker.lua]]);
 
 function main_entrance()
+	if (sf07_isactive() == 0) then
+		Say("Trong thêi gian ho¹t ®éng (02/02/2007 ®Õn 06/03/2007), ta sÏ gióp mäi ng­êi lµm ph¸o.", 0);
+		return 1;
+	end;
+	if (sf07_isrightuser() ~= 1) then
+		Say("<color=yellow>ChØ cã ng­êi ch¬i n¹p thÎ trªn cÊp 50<color> míi cã thÓ tham gia ho¹t ®éng TÕt Nguyªn §¸n", 0);
+		return
+	end;
 	Say("Ta sÏ gióp mäi ng­êi lµm ph¸o ®Ó ®ãn n¨m míi rén r·. Quı kh¸ch muèn lµm lo¹i ph¸o nµo?", 7,
 	"Ta muèn lµm Ph¸o trung/#confirm_make(1)",
 	"Ta muèn lµm Ph¸o ®¹i/#confirm_make(3)",
@@ -18,7 +26,7 @@ end;
 
 tab_Content = {
 	{"Ph¸o trung", "3 viªn ph¸o tiÓu", 50, {1352, "Ph¸o trung"}, {1, 1351, "Ph¸o tiÓu"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ mÊt ®i 1 viªn ph¸o tiÓu"},
-	{"Phong ph¸o tiÓu", "10 viªn ph¸o tiÓu, 2 viªn ph¸o trung vµ 1000 l­îng.", 50, {1354, "phong ph¸o tiÓu ®Æc biÖt"}, {0, 1357, "phong ph¸o tiÓu th­êng"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ nhËn ®­îc 1 Phong ph¸o tiÓu th­êng. NÕu thµnh c«ng, sÏ nhËn ®­îc 1 Phong ph¸o tiÓu ®Æc biÖt"},
+	{"Phong ph¸o tiÓu", "10 viªn ph¸o tiÓu, 2 viªn ph¸o trung vµ 1000 l­îng.", 20, {1354, "phong ph¸o tiÓu ®Æc biÖt"}, {0, 1357, "phong ph¸o tiÓu th­êng"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ nhËn ®­îc 1 Phong ph¸o tiÓu th­êng. NÕu thµnh c«ng, sÏ nhËn ®­îc 1 Phong ph¸o tiÓu ®Æc biÖt"},
 	{"Ph¸o ®¹i", "3 viªn ph¸o trung", 50, {1353, "Ph¸o ®¹i"}, {1, 1352, "Ph¸o trung"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ mÊt ®i 1 viªn ph¸o trung"},
 	{"Phong ph¸o trung", "10 viªn ph¸o trung, 2 viªn ph¸o ®¹i vµ 3000 l­îng.", 20, {1355, "Phong ph¸o trung ®Æc biÖt"}, {0, 1358, "Phong ph¸o trung th­êng"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ nhËn ®­îc Phong ph¸o trung th­êng. NÕu thµnh c«ng, sÏ nhËn ®­îc Phong ph¸o trung ®Æc biÖt"},
 	{"Phong ph¸o ®¹i", "100 viªn ph¸o ®¹i vµ 5000 l­îng.", 15, {1356, "Phong ph¸o ®¹i ®Æc biÖt"}, {0, 1359, "Phong ph¸o ®¹i th­êng"}, "NÕu lµm thÊt b¹i, quı kh¸ch sÏ nhËn ®­îc Phong ph¸o ®¹i th­êng. NÕu thµnh c«ng, sÏ nhËn ®­îc Phong ph¸o ®¹i ®Æc biÖt"},

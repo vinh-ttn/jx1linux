@@ -12,11 +12,11 @@ Include("\\script\\vng_lib\\bittask_lib.lua")
 
 --TSK_DAILY_CHANGE = 2902  -- Ã¿Ìì×î¶àÌáÉıµÄ´ÎÊı
 --TSK_CHANGE_DAY = 2903	-- ¼ÇÂ¼×îºóÒ»´ÎÌáÉıµÄÈÕÆÚ
---DC 60 lan doi exp, By: ThanhLD 20130611
-DAILY_CHANGE_MAX_VALUE = 60		-- Ã¿Ìì¶Ò»»ÉÏÏŞ 
+--By: Ngavn 2011/12/06
+DAILY_CHANGE_MAX_VALUE = 30		-- Ã¿Ìì¶Ò»»ÉÏÏŞ 
 MAP_ID = 967		-- µØÍ¼id
---By: ThanhLD
-NDEL_PLAYEXP_PER = 6000000	-- Ã¿´Î¶Ò»»ĞèÒªÏûºÄµÄÍæ¼Ò¾­Ñé
+--By: Ngavn
+NDEL_PLAYEXP_PER = 10000000	-- Ã¿´Î¶Ò»»ĞèÒªÏûºÄµÄÍæ¼Ò¾­Ñé
 NADD_SKILLEXP_PER = 50		-- Ã¿´Î¶Ò»»¿ÉÒÔ»ñµÃµÄÊìÁ·¶È
 
 szScriptPath = "\\script\\event\\skillexp_150\\skillexp_150_main.lua"
@@ -112,10 +112,9 @@ function addDailyTask_Free(nValue)
 --		SetTask(TSK_CHANGE_DAY, nCurDate)
 --		SetTask(TSK_DAILY_CHANGE, 0)
 --	end
--- DC sè lÇn ®æi lªn 60 lÇn/ngµy, by ThanhLD 20130611
 	tbTrainSkill150:ResetDailyTask();
 	local nDayTime = tbVNG_BitTask_Lib:getBitTask(tbTrainSkill150.tbBIT_Free_Use)
-	if nDayTime > 60 then
+	if nDayTime > 30 then
 		tbTrainSkill150:addDailyTask_Fee(1)
 	else
 		tbVNG_BitTask_Lib:addTask(tbTrainSkill150.tbBIT_Free_Use, nValue)
@@ -146,20 +145,14 @@ function playerexp2skillexp(nNpcIndex, dwNpcId, nSkillId)
 	end
 	
 	local szSkillName = GetSkillName(nSkillId)
-	local nSkillLevel = HaveMagic(nSkillId)
 --	print("nSkillId = " .. nSkillId)
-	if nSkillLevel == -1 then
+	if HaveMagic(nSkillId) == -1 then
 		Msg2Player("§èi víi lo¹i vâ c«ng nµy hµo v« ®Çu tù, hay lµ ®i lÜnh ngé c¸i kh¸c ®i")
 		return
 	end
 	
 	if GetCurrentMagicLevel(nSkillId, 0) >= GetSkillMaxLevel(nSkillId) then
 		Msg2Player("Kü n¨ng hiÖn t¹i ®· ®¹t giíi h¹n cao nhÊt, kh«ng cÇn ph¶i t¨ng thªm n÷a")
-		return
-	end
-	
-	if nSkillLevel == 20 then
-		Msg2Player("KÜ n¨ng cÊp 21 nµy kh«ng thÓ th«ng qua c¸ch nµy ®Ó tiÕn hµnh tu luyÖn. ")
 		return
 	end
 	
@@ -236,18 +229,19 @@ end
 function getNeedPlayerExp(nSkillId, nNumber)
 	local nNeedPlayerExp = NDEL_PLAYEXP_PER
 	local nPlayerLevel = GetLevel()
-	--By: ThanhLD 60 lan doi dau tien thi Exp = 600000, sau 50 lan sau Exp = 8000000
+	
+	--By: NgaVN 30 lan doi dau tien thi Exp = 1000000, sau 20 lan sau Exp = 15000000
 	local nDayTime = tbVNG_BitTask_Lib:getBitTask(tbTrainSkill150.tbBIT_Free_Use) + tbVNG_BitTask_Lib:getBitTask(tbTrainSkill150.tbBIT_Fee_Use)
 	if nDayTime > DAILY_CHANGE_MAX_VALUE then
-		nNeedPlayerExp = 8000000
+		nNeedPlayerExp = 15000000
 	end
 	if(nNumber == 1 and nDayTime + 1 > DAILY_CHANGE_MAX_VALUE) then
-		nNeedPlayerExp = 8000000
+		nNeedPlayerExp = 15000000
 	end
 
 	local _, nRet = tbTrainSkill150:GetMaxTask(nSkillId)
 	if 	nRet == 1 then
-		nNeedPlayerExp = 8000000
+		nNeedPlayerExp = 15000000
 	end
 	-- 200¼¶ÌØÊâ´¦Àí
 	if nPlayerLevel >= 200 then		

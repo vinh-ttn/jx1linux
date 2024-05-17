@@ -21,7 +21,7 @@ shengdan0811_TSK_UseCakeExp = 1913 --使用雪花蛋糕的状态
 function shengdan0811_ResetTask()
 	--只在活动结束前需要把变量重置，避免有新活动与之冲突
 	--，为了保险定为2月1日，应该是活动一切事件包括道具使用等的最后最后的一天
-	if tonumber(GetLocalDate("%Y%m%d")) <= 20090201 then
+	if tonumber(GetLocalDate("%Y%m%d")) <= 20290201 then
 		if (GetTask(shengdan0811_TSK_Version) ~= %nACT_VERSION) then
 			SetTask(shengdan0811_TSK_Version, %nACT_VERSION);
 			SetTask(shengdan0811_TSK_BingJing, 150000);

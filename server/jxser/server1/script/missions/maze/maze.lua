@@ -35,6 +35,7 @@ Include("\\script\\missions\\maze\\randomtask\\task_32.lua")
 Include("\\script\\missions\\maze\\randomtask\\task_33.lua")
 Include("\\script\\missions\\maze\\randomtask\\task_40.lua")
 Include("\\script\\missions\\maze\\randomtask\\task_41.lua")
+		
 Include("\\script\\missions\\maze\\addstatdata.lua")
 Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\activitysys\\playerfunlib.lua")
@@ -72,8 +73,8 @@ TASKSTAT_INIT		= 0		-- ÈÎÎñ»¹Î´¿ªÊ¼
 TASKSTAT_DOING		= 1		-- ÈÎÎñ½øĞĞÖĞ
 TASKSTAT_FINISH		= 2		-- ÈÎÎñÍê³É
 
-COUNT_JOINEVERYDAY	= 2	-- Ã¿Ìì¿ÉÒÔ²Î¼ÓÃÔ¹¬µÄ´ÎÊı
-COUNT_JOINTOTAL		= 6	-- ×î´óÀÛ»ı´ÎÊı
+COUNT_JOINEVERYDAY	= 5	-- Ã¿Ìì¿ÉÒÔ²Î¼ÓÃÔ¹¬µÄ´ÎÊı
+COUNT_JOINTOTAL		= 15	-- ×î´óÀÛ»ı´ÎÊı
 
 TASK_JOINPERMISSION	= 2842	-- ´Ó2000-1-1ÆğÊ¼µÄÌìÊı * 100 + µ±Ìì²Î¼ÓµÄ´ÎÊı
 
@@ -293,13 +294,13 @@ function Maze:CheckTimeout()
 	self.m_GameMinutes = self.m_GameMinutes + 1
 	if (self.m_LeftMinutes > 0) then
 		if (mod(self.m_GameMinutes, 3) == 0) then
-			self:NotifyMatesInMaze(format("HiÖn t¹i ®· tiÕn hµnh ®­îc %d phót, kho¶ng c¸ch kÕt thóc cßn l¹i %d phót",
+			self:NotifyMatesInMaze(format("HiÖn t¹i ®· tiÕn hµnh ®­îc %d phót, thêi gian cßn l¹i lµ %d phót",
 				self.m_GameMinutes,
 				self.m_LeftMinutes))
 		end
 		return 1
 	else
-		self:NotifyAllMates("Thêi gian thİ luyÖn KiÕm Gia lÇn nµy ®· ®Õn, chóc c¸c h¹ trong lÇn thİ luyÖn sau nµy giµnh ®­îc thµnh tİch tèt.")
+		self:NotifyAllMates("Thêi gian thİ luyÖn KiÕm Gia lÇn nµy ®· hÕt, chóc c¸c h¹ trong lÇn thİ luyÖn sau nµy giµnh ®­îc thµnh tİch tèt.")
 		self:KickAll()
 		self.m_GameTimerId = 0
 		self:Destroy()
@@ -331,7 +332,7 @@ function Maze:PopTask()
 		self.m_FreeTaskList = {1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 17, 20, 21, 22, 24, 32, 33, 40, 41, 10, 23}
 		count = getn(self.m_FreeTaskList)
 		if (self.m_PopTaskCount == 0) then
-			-- ÓĞ¿ÉÄÜÎŞ·¨Í¨¹ØµÄÊÂ¼şÈçµÚ10ºÍ23²»Òª·ÅÔÚµÚÒ»¸ö·¿¼ä
+			-- task ®Çu tiªn kh«ng ®Ó ra task 10 hoÆc 23
 			count = count - 2
 		end
 	else
@@ -387,7 +388,7 @@ function Maze:TaskAward(room)
 	end
 	for i = 1, getn(players) do
 		-- 100W¾­Ñé
-		players[i]:AddStackExp(2*1000 * 1000)
+		players[i]:AddStackExp(500 *1000 * 1000)
 		tbMazeExtAward:MazeStepFinishAward(players[i])
 	end
 	-- ´óÁ¦Íè
@@ -402,7 +403,7 @@ function Maze:FinalAward(room)
 	for i = 1, getn(players) do
 		local player = players[i]
 		-- 1000W¾­Ñé
-		player:AddStackExp(10 * 1000 * 1000)
+		player:AddStackExp(500 * 1000 * 1000)
 		tbMazeExtAward:MazeBossAward(player)
 		-- ·ÉËÙÍè
 		--player:AddItem(6, 0, 6, 1, 0, 0)
@@ -1222,7 +1223,7 @@ end
 function Room:Enter(player)
 	if (self.m_Status == TASKSTAT_INIT) then
 		self.m_Maze:SetHotPosition(self.m_Row, self.m_Col)
-		player:Msg2Player("C¸c ng­¬i ®· ®i vµo mét c¨n phßng thÇn bİ, h·y noÊn vµo Bia §¸ ë gi÷a c¨n phßng, sÏ cã no÷ng sù m¹o hiÓm ®ang ®îi c¸c ng­¬i ë ®ã!")
+		player:Msg2Player("C¸c ng­¬i ®· ®i vµo mét c¨n phßng thÇn bİ, h·y Ên vµo Bia §¸ ë gi÷a c¨n phßng, sÏ cã nh÷ng sù m¹o hiÓm ®ang ®îi c¸c ng­¬i ë ®ã!")
 	end
 	self.m_Players[player:GetName()] = player
 	self.m_PlayerCount = self.m_PlayerCount + 1
@@ -1240,6 +1241,8 @@ function Room:Enter(player)
 	if (self.m_Task ~= nil and self.m_Task.OnEnter ~= nil) then
 		self.m_Task:OnEnter(player, self.m_PlayerCount)
 	end
+	local distance = abs(self.m_Maze.m_EndRoom.row-self.m_Row) + abs(self.m_Maze.m_EndRoom.col-self.m_Col)
+	player:Msg2Player("Cßn c¸ch phßng cuèi: <color=yellow>"..distance.." phßng.")
 end
 
 function Room:Leave(player)
@@ -1297,14 +1300,14 @@ function Room:StartTask(player)
 		self.m_Status = TASKSTAT_DOING
 		if (self.m_TaskId == 0) then
 			self.m_TaskId = self.m_Maze:PopTask()
-		end
+		end 
 		local fin = self.m_Maze.m_EndRoom
 		if (fin.row == self.m_Row and fin.col == self.m_Col) then
 			self.m_Maze:SetLeftMinutes(15)
 			self.m_Maze:NotifyMatesInMaze(format("TiÕn vµo c¨n phßng sù kiÖn cuèi cïng, b¾t ®Çu tİnh l¹i %d phót", 15))
 		end
 		self.m_ReadTimerId = TimerList:AddTimer(self, 10 * 18)
-		self.m_Maze:NotifyMatesInMaze("Sù kiÖn ®· gÇn ®Õn, 10 gi©y sau sÏ b¾t ®Çu, xin h·y noÊn vµo Bia §¸ ®Ó xem h­íng dÉn v­ît ¶i.")
+		self.m_Maze:NotifyMatesInMaze("Sù kiÖn sÏ b¾t ®Çu sau 10 gi©y, xin h·y Ên vµo Bia §¸ ®Ó xem h­íng dÉn v­ît ¶i.")
 		self.m_Maze:Log(format("start task: player(%s)", player:GetName()))
 		AddStatDataTaskStartCount(self.m_TaskId)
 		SetTaskStartTime(self.m_TaskId, self.m_Maze.m_MapId)
@@ -1344,7 +1347,7 @@ function Room:FinishTask()
 			return
 		else
 			self.m_Maze:TaskAward(self)
-			self.m_Maze:NotifyMatesInMaze("Chóc mõng ng­¬I ®· hoµn thµnh khiªu chiÕn cña gian phßng nµy, ng­¬I ®· ph¸t hiÖn ra 3 con ®­êng ®· ®­îc më ra cña gia phßng nµy, c¸c ng­¬i cã thÓ ®i vµo m«t gian phßng tiÕp theo.")
+			self.m_Maze:NotifyMatesInMaze("Chóc mõng ng­¬i ®· hoµn thµnh cöa ¶i nµy, 3 con ®­êng míi ®· ®­îc më ra, h·y chän mét ®Ó vµo gian phßng tiÕp theo.")
 		end
 		self.m_Status = TASKSTAT_FINISH
 	else

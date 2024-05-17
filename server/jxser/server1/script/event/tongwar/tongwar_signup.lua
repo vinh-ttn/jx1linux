@@ -10,12 +10,9 @@ function tongwar_want2signup()
 		CreateTaskSay({"<dec><npc>Bang <color=red>"..tongname.."<color> kh´ng c„ li™n minh vÌi c∏c bang hÈi chi’m thµnh, kh´ng th” Æi vµo ß u tr≠Íng chu»n bﬁ.", "K’t thÛc ÆËi thoπi/OnCancel"})
 		return
 	end
-	--VLDNB 13- Æi“u ki÷n tham gia: Æ∑ vµo bang tr≠Ìc 0h ngµy 6/4 - Modified By DinhHQ - 20130401
-	local nTongJoinTime = GetJoinTongTime()*60
-	local nCurSvTime = GetCurServerTime()
-	local nMinTime = Tm2Time(2013, 4, 6, 0, 0)
-	if (nCurSvTime - nTongJoinTime) > nMinTime then
-		Say("ThÍi gian gia nhÀp bang y™u c«u <color=red>tr≠Ìc 0h ngµy 6/4/2013<color>mÌi Æ≠Óc ph–p vµo Æ u tr≠Íng.", 0)
+	--VLDNB 10- Æi“u ki÷n tham gia: Æ∑ vµo bang ÆÒ 1 ngµy - Modified By DinhHQ - 20111013	
+	if (GetJoinTongTime() < 1440) then
+		Say("ThÍi gian gia nhÀp bang ch≠a ÆÒ <color=red>1 ngµy<color>, kh´ng th” vµo Æ u tr≠Íng.", 0)
 		return
 	end
 	--VLDNB 10 ki”m tra c∏c loπi m∆t nπ t®ng Æi”m TK - Modified By DinhHQ - 20111013	

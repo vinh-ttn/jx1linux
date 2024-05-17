@@ -527,6 +527,6 @@ TB_DAIYITOUSHI_FACTS =
 
 	 tbAwardItem = 
 	{	
-		{szName = "Than hanh phu", tbProp={6,1,1266,1,0,0,0}, nCount=1,nExpiredTime=1440*7,nBindState = -2},
+		{szName = "ThÇn Hµnh Phï", tbProp={6,1,1266,1,0,0,0}, nCount=1,nExpiredTime=1440*7,nBindState = -2},
 		{szName = "Thæ ®Þa phï", tbProp={6,1,438,1,0,0,0}, nCount=1,nExpiredTime=1440*7,nBindState=-2},
 	}

@@ -8,10 +8,6 @@ Include("\\script\\lib\\objbuffer_head.lua")
 Include("\\script\\script_protocol\\protocol_def_c.lua")
 
 function BingoMachine:RecvResult(nResult, nRefiningCount, nType, nLevel)
-	-- do 
-	-- 	return Talk(1, "", "Chøc n¨ng ch­a më!")
-	-- end
-
 	if nResult == ROTATE_ERROR_STATUS then
 		Msg2Player("Ng­¬i vÉn ch­a lÜnh th­ëng kh«ng thÓ ®Æt c­îc")
 	elseif nResult == ROTATE_ERROR_PRINING then
@@ -40,10 +36,6 @@ function BingoMachine:ApplyAward(nType)
 end
 
 function BingoMachine:ApplyOpenWindon()
-	-- do 
-	-- 	return Talk(1, "", "Chøc n¨ng ch­a më!")
-	-- end
-
 	local handle = OB_Create()
 	ObjBuffer:PushByType(handle, OBJTYPE_STRING, GetSelfName())
 	ObjBuffer:PushByType(handle, OBJTYPE_NUMBER, C2S_OPERATION_OPEN)
@@ -53,10 +45,6 @@ function BingoMachine:ApplyOpenWindon()
 end
 
 function BingoMachine:ApplyOpenShop()
-	-- do 
-	-- 	return Talk(1, "", "Chøc n¨ng ch­a më!")
-	-- end
-
 	local handle = OB_Create()
 	ObjBuffer:PushByType(handle, OBJTYPE_STRING, GetSelfName())
 	ObjBuffer:PushByType(handle, OBJTYPE_NUMBER, C2S_OPERATION_SHOP)
@@ -66,9 +54,6 @@ function BingoMachine:ApplyOpenShop()
 end
 
 function BingoMachine:OpenWindow(nStat, nOdds, uAward, uCurAward, uTime, nRefining)
-	-- do 
-	-- 	return Talk(1, "", "Chøc n¨ng ch­a më!")
-	-- end
 	
 	local nType = GetByte(uAward, 1)
 	local strAward = ""

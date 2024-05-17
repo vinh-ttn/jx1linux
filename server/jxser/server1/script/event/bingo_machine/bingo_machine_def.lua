@@ -75,8 +75,8 @@ tbBingoMachineAward = {
 		[2] = {1, 3, 10, 35, 120, 400}},
 	[5] = {szName = "KindBox", 
 		[1] = {	
-			[1]={szName="Quý Träng B¶o R­¬ng",tbProp={6,1,3053,1,0,0}, nCount=1, nExpiredTime = 43200},
-			[2]={szName="Tinh Mü B¶o R­¬ng",tbProp={6,1,3054,1,0,0}, nCount=1, nExpiredTime = 43200},},
+			[1]={szName="Quý Träng B¶o R­¬ng",tbProp={6,1,3053,1,0,0}, nCount=1},
+			[2]={szName="Tinh Mü B¶o R­¬ng",tbProp={6,1,3054,1,0,0}, nCount=1},},
 		[2] = {20, 80}},		
 }
 tbBingoMachineAwardSpace = {

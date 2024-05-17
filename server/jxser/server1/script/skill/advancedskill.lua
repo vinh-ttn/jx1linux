@@ -35,7 +35,7 @@ SKILLS=
 	sl_adskill={ --ÉÙÁÖ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Khi thi triÓn <color=water>[Minh Kİnh V?§µi]<color> t¨ng c«ng kİch tÇm gÇn v?tÇm xa<color=orange>"..floor(Link(level,SKILLS.sl_adskill.meleedamagereturn_p[1])).."%<color>ph¶n s¸t th­¬ng, duy tr?color=orange>"..floor(Link(level,SKILLS.sl_adskill.meleedamagereturn_p[2]) / 18).." gi©y<color>\n"
+				return "Khi thi triÓn <color=water>[Minh Kİnh V« §µi]<color> t¨ng c«ng kİch tÇm gÇn vµ tÇm xa <color=orange>"..floor(Link(level,SKILLS.sl_adskill.meleedamagereturn_p[1])).." %<color> ph¶n s¸t th­¬ng, duy tr× <color=orange>"..floor(Link(level,SKILLS.sl_adskill.meleedamagereturn_p[2]) / 18).." gi©y<color>\n"
 			end,
 		autoreplyskill=
 		{
@@ -49,13 +49,13 @@ SKILLS=
 	tw_adskill={ --ÌìÍõ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Thi triÓn <color=water>[Du Long Ch©n Khİ]<color> c?color=orange>"..floor(100 - Link(level,SKILLS.tw_adskill.missle_missrate[1])).."%<color>t?l?miÔn dŞch tr¹ng th¸i tiªu cùc cña b¶n th©n, duy tr?color=orange>"..floor(Link(level,SKILLS.tw_adskill.ignorenegativestate_p[2]) / 18).." gi©y<color>\n"
+				return "Thi triÓn <color=water>[Du Long Ch©n Khİ]<color> cã <color=orange>"..floor(100 - Link(level,SKILLS.tw_adskill.missle_missrate[1])).." %<color>tØ lÖ miÔn dŞch tr¹ng th¸i tiªu cùc cña b¶n th©n, duy tr× <color=orange>"..floor(Link(level,SKILLS.tw_adskill.ignorenegativestate_p[2]) / 18).." gi©y<color>\n"
 			end,
 		autoreplyskill=
 		{
 			{{1,1231 * 256 + 1,LineWith8Byte},{20,1231 * 256 + 20,LineWith8Byte}},
 			{{1,-1 },{20,-1 }},
-			{{1,30*18*256 + 1,LineWith8Byte},{20,10*18*256 + 3,LineWith8Byte},{30,10*18*256 + 5,LineWith8Byte},{31,10*18*256 + 5,LineWith8Byte}}
+			{{1,30*18*256 + 10,LineWith8Byte},{20,10*18*256 + 10,LineWith8Byte},{30,10*18*256 + 10,LineWith8Byte},{31,10*18*256 + 10,LineWith8Byte}}
 		},
 --		autoattackskill=
 --		{
@@ -63,7 +63,7 @@ SKILLS=
 --			{{1,10},{20,40}},
 --			{{1,10*18*256 + 10},{20,4*18*256 + 50}}
 --		},
-		missle_missrate={{{1,80},{20,20},{30,10},{31,10}}},
+		missle_missrate={{{1,0},{20,0},{30,0},{31,0}}},
 		ignorenegativestate_p=
 		{
 			{{1,100},{15,100},{20,100},{21,100}},
@@ -73,8 +73,8 @@ SKILLS=
 	wu_adskill ={ --Îå¶¾½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Tróng môc tiªu c?color=orange>"..floor(Link(level,SKILLS.wu_adskill.autoattackskill[3]) - 1*18*256).."%<color>t?l?béc ph¸t <color=water>[Hån ¶nh Tïng Sinh]<color> cÊp t­¬ng øng\n"..
-				"Sau mçi lÇn thi triÓn<color=orange>"..floor((Link(level,SKILLS.wu_adskill.autoattackskill[3]) / (18*256))).."gi©y<color> s?kh«ng thi triÓn l¹i\n"
+				return "Tróng môc tiªu cã <color=orange>"..floor(Link(level,SKILLS.wu_adskill.autoattackskill[3]) - 1*18*256).." %<color> tØ lÖ béc ph¸t <color=water>[Hån ¶nh Tïng Sinh]<color> cÊp t­¬ng øng\n"..
+				"Sau mçi lÇn thi triÓn <color=orange>"..floor((Link(level,SKILLS.wu_adskill.autoattackskill[3]) / (18*256))).." gi©y<color> sÏ kh«ng thi triÓn l¹i\n"
 			end,
 		autoattackskill=
 		{
@@ -86,10 +86,11 @@ SKILLS=
 	tm_adskill ={ --ÌÆÃÅ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Khi sinh lùc thÊp h¬n 25% c?x¸c suÊt <color=orange>"..floor(Link(level,SKILLS.tm_adskill.autorescueskill[3]) - 15*18*256).."%<color>t?l?thi triÓn 100% hãa gi¶i s¸t th­¬ng\n"..
-				"Sau mçi lÇn thi triÓn<color=orange>"..floor((Link(level,SKILLS.tm_adskill.autorescueskill[3]) / (18*256))).."gi©y<color> s?kh«ng thi triÓn l¹i\n"
+				return "Khi sinh lùc thÊp h¬n 25% cã x¸c suÊt <color=orange>"..floor(Link(level,SKILLS.tm_adskill.autorescueskill[3]) - 15*18*256).." %<color> tØ lÖ béc ph¸t 200% Hãa gi¶i s¸t th­¬ng vµ 20% bá qua Phßng thñ vËt lı\n"..
+				"Sau mçi lÇn thi triÓn <color=orange>"..floor((Link(level,SKILLS.tm_adskill.autorescueskill[3]) / (18*256))).." gi©y<color> sÏ kh«ng thi triÓn l¹i\n"
 			end,	
-		block_rate={{{1,100},{2,100}},{{1,18*2},{20,18*4}}},
+		block_rate={{{1,200},{2,200}},{{1,18*1},{19,18*1},{20,18*2},{50,18*2}}},
+		anti_physicsres_yan_p={{{1,20},{2,20}},{{1,18*1},{19,18*1},{20,18*2},{50,18*2}}},
 		autorescueskill=
 		{
 			{
@@ -108,8 +109,8 @@ SKILLS=
 	em_adskill ={ --¶ëÃ¼½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Tróng môc tiªu c?color=orange>"..floor(Link(level,SKILLS.em_adskill.autoattackskill[3]) - 3*18*256).."%<color>t?l?thi triÓn <color=water>[T?Hµng Ph?§é]<color> cÊp t­¬ng øng\n"..
-				"Sau mçi lÇn thi triÓn<color=orange>"..floor((Link(level,SKILLS.em_adskill.autoattackskill[3]) / (18*256))).."gi©y<color> s?kh«ng thi triÓn l¹i\n"
+				return "Tróng môc tiªu cã <color=orange>"..floor(Link(level,SKILLS.em_adskill.autoattackskill[3]) - 3*18*256).." %<color> tØ lÖ thi triÓn <color=water>[Tõ Hµng Phæ §é]<color> cÊp t­¬ng øng\n"..
+				"Sau mçi lÇn thi triÓn <color=orange>"..floor((Link(level,SKILLS.em_adskill.autoattackskill[3]) / (18*256))).." gi©y<color> sÏ kh«ng thi triÓn l¹i\n"
 			end,
 		autoattackskill=
 		{
@@ -121,7 +122,7 @@ SKILLS=
 	cy_adskill ={ --´äÑÌ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Thi triÓn <color=water>[Dung TuyÕt V?Tung]<color> lµm Èn th©n, mçi lÇn Èn th©n duy tr?color=orange>"..floor(Link(level,SKILLS.cy_adskill.hide[2]) / 18).." gi©y<color>\n"
+				return "Thi triÓn <color=water>[Dung TuyÕt V« Tung]<color> lµm Èn th©n, mçi lÇn Èn th©n duy tr× <color=orange>"..floor(Link(level,SKILLS.cy_adskill.hide[2]) / 18).." gi©y<color>\n"
 			end,
 		autoreplyskill=
 		{
@@ -146,8 +147,8 @@ SKILLS=
 	gb_adskill={ --Ø¤°ï½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Khi thi triÓn <color=water>[Thiªn Hµnh Kh?C«ng]<color>c?th?t¨ng t?l?béc ph¸t [Hçn Thiªn Kh?C«ng]<color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[1])).."%<color>, \n"..
-				"v?b?qua háa phßng: <color=orange>"..floor(Link(level,SKILLS.gb_adskill.anti_fireres_yan_p[1])).."%(D­¬ng)<color>, duy tr?color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18).." gi©y<color>\n"
+				return "Khi thi triÓn <color=water>[Thiªn Hµnh Khİ C«ng]<color> cã thÓ t¨ng tØ lÖ béc ph¸t [Hçn Thiªn Khİ C«ng] <color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[1])).." %<color>, \n"..
+				"vµ bá qua háa phßng: <color=orange>"..floor(Link(level,SKILLS.gb_adskill.anti_fireres_yan_p[1])).." %(D­¬ng)<color>, duy tr× <color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18).." gi©y<color>\n"
 				end,
 		autoreplyskill=
 		{
@@ -169,7 +170,7 @@ SKILLS=
 	wd_adskill ={ --Îäµ±½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Khi thi triÓn <color=water>[¢m D­¬ng Khi QuyÕt]<color> c?th?khiÕn<color=orange>"..floor(Link(level,SKILLS.wd_adskill.damage2addmana_p[1])).."%<color>s¸t th­¬ng chuyÓn hãa thµnh néi lùc, duy tr?color=orange>"..floor(Link(level,SKILLS.wd_adskill.damage2addmana_p[2])/18).." gi©y<color>\n"
+				return "Khi thi triÓn <color=water>[¢m D­¬ng Khi QuyÕt]<color> cã thÓ khiÕn <color=orange>"..floor(Link(level,SKILLS.wd_adskill.damage2addmana_p[1])).." %<color> s¸t th­¬ng chuyÓn hãa thµnh néi lùc, duy tr× <color=orange>"..floor(Link(level,SKILLS.wd_adskill.damage2addmana_p[2])/18).." gi©y<color>\n"
 				end,
 		autoreplyskill=
 		{
@@ -186,8 +187,8 @@ SKILLS=
 	kl_adskill ={ --À¥ÂØ½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "Khi thi triÓn<color=water>[Tiªn Thiªn C­¬ng Khİ]<color> c?th?t¨ng t?l?béc ph¸t [L­ìng Nghi Ch©n Khİ]<color=orange>"..floor(Link(level,SKILLS.kl_adskill.enhance_717_auto[1])).."%<color>, \n"..
-				"v?b?qua L«i phßng: <color=orange>"..floor(Link(level,SKILLS.kl_adskill.anti_lightingres_yan_p[1])).."%(D­¬ng)<color>, duy tr?color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18).." gi©y<color>\n"
+				return "Khi thi triÓn <color=water>[Tiªn Thiªn C­¬ng Khİ]<color> cã thÓ t¨ng tØ lÖ béc ph¸t [L­ìng Nghi Ch©n Khİ] <color=orange>"..floor(Link(level,SKILLS.kl_adskill.enhance_717_auto[1])).." %<color>, \n"..
+				"vµ bá qua L«i phßng: <color=orange>"..floor(Link(level,SKILLS.kl_adskill.anti_lightingres_yan_p[1])).." %(D­¬ng)<color>, duy tr× <color=orange>"..floor(Link(level,SKILLS.gb_adskill.enhance_714_auto[2])/18).." gi©y<color>\n"
 				end,
 		autoreplyskill=
 		{
@@ -205,17 +206,17 @@ SKILLS=
 			{{1,5},{20,15},{30,20},{31,20}},
 			{{1,5*18 },{20,15*18},{21,15*18}}
 		},
-	},
+								},
 	xy_adskill ={ --åĞÒ£½ø½×¼¼ÄÜ
 		skill_desc=
 			function(level)
-				return "<color=water>¡¸·÷ÒÂ¡¹<color>×´Ì¬£ºÊÍ·ÅÒ»¸ö¿ÉµÖÓùÄÚÁ¦×î´óÖµ<color=orange>"..floor(Link(level,SKILLS.xy_adskill.staticmagicshield_p[1])/100)..
-				"±¶<color>ÉËº¦µÄÕæÆø»¤¶Ü\n»¤¶ÜÃ¿<color=orange>"..floor(Link(level,SKILLS.xy_adskill.staticmagicshield_p[2])/18+1)..
-				"Ãë<color>Ë¢ĞÂÒ»´Î£¬³ÖĞø<color=orange>"..floor(Link(level,SKILLS.xy_adskill.fastwalkrun_p[2])/18).."Ãë<color>\n\n"
+				return "<color=water>Tr¹ng th¸i [B¾c Minh Chi Gi¸p]:<color> Phãng thİch líp gi¸p néi lùc cùc ®¹i <color=orange>"..floor(Link(level,SKILLS.xy_adskill.staticmagicshield_p[1])/100)..
+				" lÇn <color> th­¬ng tæn ch©n khİ hé thuÉn \nHé thuÉn mçi <color=orange>"..floor(Link(level,SKILLS.xy_adskill.staticmagicshield_p[2])/18+1)..
+				" gi©y<color> ®æi míi 1 lÇn, liªn tôc <color=orange>"..floor(Link(level,SKILLS.xy_adskill.fastwalkrun_p[2])/18).." gi©y<color>\n\n"
 			end,
 		autoreplyskill=
 		{
-			{{1,2102 * 256 + 1,LineWith8Byte},{20,2102 * 256 + 20,LineWith8Byte}},
+			{{1,1902 * 256 + 1,LineWith8Byte},{20,1902 * 256 + 20,LineWith8Byte}},
 			{{1,-1 },{20,-1 }},
 			{{1,30*18*256 + 1,LineWith8Byte},{30,30*18*256 + 10,LineWith8Byte},{31,30*18*256 + 10,LineWith8Byte}}
 		},

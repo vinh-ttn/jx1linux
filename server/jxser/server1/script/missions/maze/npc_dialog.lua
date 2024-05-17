@@ -10,7 +10,7 @@ Include("\\script\\activitysys\\playerfunlib.lua")
 LEVEL_MIN = 120
 
 LIMITS = {
-	MIN_TEAMSIZE = 6,
+	MIN_TEAMSIZE = 1,
 	FLAG_CHECKTIME = 1,
 }
 
@@ -111,7 +111,7 @@ function NpcXiaozhuzhu:CheckTime()
 		return 1
 	end
 	local _, _, _, _, m = MakeDateTime(5, GetCurServerTime())
-	if (m > 30) then
+	if (m > 59) then -- sau ... phót, më suèt giê v× chØ ch¬i 1 m×nh
 		return 0
 	else
 		return 1
@@ -120,11 +120,11 @@ end
 
 function NpcXiaozhuzhu:CheckTeam(player)
 	local count = player:GetTeamSize()
-	if (count < LIMITS.MIN_TEAMSIZE) then
-		player:Say("Tõ 6-8 ng­êi cÊp 120 trë lªn cïng nhau tæ ®éi míi ®­îc ®i vµo.")
+	if (count < LIMITS.MIN_TEAMSIZE) then -- ®· chØnh xuèng 1 ng­êi
+		player:Say("Ph¶i t¹o tæ ®éi míi ®­îc ®i vµo (dï chØ 1 m×nh).")
 		return 0
 	elseif (self:CheckTime() == 0) then
-		player:Say("ChØ cã thÓ b¸o danh sau ®Çu mçi giê vµ tr­íc 30 phót.")
+		player:Say("ChØ cã thÓ b¸o danh tr­íc 59 phót mçi giê.")
 		return 0
 	end
 	local mapid, _, _ = player:GetWorldPos()

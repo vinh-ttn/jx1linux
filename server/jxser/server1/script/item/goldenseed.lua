@@ -40,7 +40,7 @@ function main(ItemIndex)
 	
 	SetTask(TASKMAXEAT, GetTask(TASKMAXEAT) + 1)	--如何保证从1开始计数呢？？
 	SetTask(TASKEATCOUNT, GetTask(TASKEATCOUNT) + 1)
-	local award_exp = 5000000
+	local award_exp = 50000000
 	AddOwnExp(award_exp)
 	return 0
 end

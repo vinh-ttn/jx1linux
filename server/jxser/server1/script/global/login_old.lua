@@ -1,9 +1,6 @@
 -- µÇÂ¼½Å±¾
 -- By: LaiLiGao(2004-06-20)
 -- Update: Dan_Deng(2004-07-09) Ìí¼Ó×Ô¶¯¸üĞÂ¼¼ÄÜ¹¦ÄÜ
---Msg2Player("Call to login_lod.lua")
---do return end
-
 Include("\\script\\global\\login_head.lua")
 Include("\\script\\global\\systemconfig.lua") -- ÏµÍ³ÅäÖÃ
 
@@ -19,7 +16,6 @@ Include("\\script\\event\\playerlvlup\\event_temp.lua")
 Include("\\script\\shitu\\shitu.lua")
 Include("\\script\\global\\titlefuncs.lua")
 IL("TITLE");
-Include("\\script\\lib\\log.lua")
 
 function main_old()
 	check_update()					-- ¼¼ÄÜ¸üĞÂ¡¢ÃÅÅÉ¼Ó±êÊ¶£¨2004-05-31£©
@@ -31,20 +27,6 @@ function main_old()
 	title_loginactive()
 	if (SYSCFG_PARTNER_OPEN) then
 		SyncPartnerMasterTask();  -- Í¬²½Í¬°é¾çÇéÈÎÎñ±äÁ¿
-	end
-	
-	local nValue = GetTask(9)
-	if nValue > 80*256 then
-		if GetLastFactionNumber() ~= 9 then
-			SetTask(9,0)
-			DelMagic(372)
-			DelMagic(375)
-			DelMagic(394)
-			tbLog:PlayerActionLog("fix taskid 9", "for kunlun")
-		else
-			SetTask(9,70*256)
-			tbLog:PlayerActionLog("fix taskid 9", "for other")
-		end
 	end
 end
 
@@ -99,14 +81,14 @@ end;
 function login_check_dupe()
 	local nValue = GetTask(156);
 	if (nValue > 0) then
-		Say("<color=red>B¹n s?dông vËt phÈm ®· b?phôc ch? h?thèng ph¸t hiÖn v?®· xãa! NÕu b¹n c?kiÕn nghi g?xin liªn h?víi ng­êi qu¶n l? C¶m ¬n b¹n ®· hîp t¸c!<color>", 1, "Tho¸t/dupe_warning");
+		Say("<color=red>B¹n sö dông vËt phÈm ®· bŞ phôc chÕ, hÖ thèng ph¸t hiÖn vµ ®· xãa! NÕu b¹n cã kiÕn nghi g× xin liªn hÖ víi ng­êi qu¶n lı! C¶m ¬n b¹n ®· hîp t¸c!<color>", 1, "Tho¸t/dupe_warning");
 
 		SetTask(156, nValue - 1);
 	end
 end
 
 function dupe_warning()
-	Msg2Player("B¹n s?dông vËt phÈm ®· b?phôc ch? h?thèng ph¸t hiÖn v?®· xãa! NÕu b¹n c?kiÕn nghi g?xin liªn h?víi ng­êi qu¶n l? C¶m ¬n b¹n ®· hîp t¸c!");
+	Msg2Player("B¹n sö dông vËt phÈm ®· bŞ phôc chÕ, hÖ thèng ph¸t hiÖn vµ ®· xãa! NÕu b¹n cã kiÕn nghi g× xin liªn hÖ víi ng­êi qu¶n lı! C¶m ¬n b¹n ®· hîp t¸c!");
 end
 
 function messenger_copytaskvalue()

@@ -334,10 +334,6 @@ SKILLS={
 												{25,300000},
 												{26,390000},
 												}},	
-		addskilldamage1={
-			[1]={{1,1743},{2,1743}},
-			[3]={{1,1},{20,30}}
-		},	
 	},
 	zhangwudu150_2={ --ÕÆÎå¶¾150µÚ2Ê½
 		seriesdamage_p={{{1,40},{20,80},{21,82}}},
@@ -444,10 +440,6 @@ SKILLS={
 												{25,300000},
 												{26,390000},
 												}},	
-		addskilldamage1={
-			[1]={{1,1743},{2,1743}},
-			[3]={{1,1},{20,30}}
-		},	
 	},
 	daowudu150_2={ --µ¶Îå¶¾150µÚ2Ê½
 		seriesdamage_p={{{1,40},{20,80},{21,82}}},
@@ -477,10 +469,10 @@ SKILLS={
 		autoattackskill={{{1,719*256 + 1},{20,719*256 + 20},{21,719*256 + 21}},{{1,-1},{20,-1}},{{1,10*18*256 + 1},{20,10*18*256 + 30},{21,10*18*256 + 30}}},
 		skill_desc=
 			function(level)
-				return "X¸c suÊt <color=orange>"..floor(Link(level,SKILLS.wudu120.autoattackskill[3]) - 10*18*256).."%<color> khiÕn cho ®èi th­¬ng b?®éc s¸t\n"..
+				return "X¸c suÊt <color=orange>"..floor(Link(level,SKILLS.wudu120.autoattackskill[3]) - 10*18*256).."%<color> khiÕn cho ®èi th­¬ng bÞ ®éc s¸t\n"..
 				", ®ång thêi lµm gi¶m <color=orange>"..floor(Link(level,SKILLS.wudu120zuzhou.poison2decmana_p[1])).."%<color> néi lùc ®èi ph­¬ng"..
 				" trong <color=orange>"..floor(Link(level,SKILLS.wudu120zuzhou.poison2decmana_p[2]) / 18).." gi©y<color>\n"..
-				" <color=orange>"..floor((Link(level,SKILLS.wudu120.autoattackskill[3]) / (18*256))).." gi©y<color> sau míi c?th?thi triÓn tiÕp"
+				" <color=orange>"..floor((Link(level,SKILLS.wudu120.autoattackskill[3]) / (18*256))).." gi©y<color> sau míi cã thÓ thi triÓn tiÕp"
 			end,
 		skill_skillexp_v={{	{1,17851239},
 							{2,19487603},

@@ -1,7 +1,6 @@
 -- FILE_LEVEL = "\\settings\\npc\\player\\level_exp.txt"
 Include("\\script\\lib\\gb_modulefuncs.lua")
 Include("\\script\\task\\task_addplayerexp.lua")  --给玩家累加经验的公共函数
-Include("\\script\\lib\\file.lua")
 
 TV_LAST_APPLY_TIME = 1571 -- 上次申请传功时间
 TV_CHUANGONG_TIMES = 1572 -- 已传功的次数
@@ -227,3 +226,25 @@ end
 function exp_svr_addexp(n_exp)
 	tl_addPlayerExp(n_exp)
 end
+
+
+
+---------------------------------------------------------------------------------------
+function GetTabFileHeight(mapfile)
+	if (TabFile_Load(mapfile, mapfile) == 0) then
+		print("Load TabFileError!"..mapfile);
+		return 0
+	end
+	return TabFile_GetRowCount(mapfile)
+end;
+
+function GetTabFileData(mapfile, row, col)
+	if (TabFile_Load(mapfile, mapfile) == 0) then
+		print("Load TabFile Error!"..mapfile)
+		return 0
+	else
+		return tonumber(TabFile_GetCell(mapfile, row, col))
+	end
+end
+
+

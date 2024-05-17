@@ -27,6 +27,10 @@ function exchange_lingpai2goldequip()
 		format("Bé trang bŞ Xİch L©n/#take_xp_equip_1(8, %d)", 2515),
 		format("Bé trang bŞ Minh Phông/#take_xp_equip_1(9, %d)", 2745),
 		format("Bé trang bŞ §»ng Long/#take_xp_equip_1(10, %d)", 2975),
+		format("Bé trang bŞ Tinh S­¬ng/#take_xp_equip_1(11, %d)", 5379),
+		format("Bé trang bŞ NguyÖt KhuyÕt/#take_xp_equip_1(12, %d)", 5670),
+		format("Bé trang bŞ DiÖu D­¬ng/#take_xp_equip_1(13, %d)", 6218),
+		format("Bé trang bŞ Anh Hµo/#take_xp_equip_1(14, %d)", 8477),
 		"L¸t n÷a quay l¹i /no",
 	};
 	
@@ -75,6 +79,8 @@ function take_xp_equip_11(n_g, n_d)
 						format("Hoa S¬n Khİ T«ng/#take_xp_equip_2(%d,%d, 25)", n_g, n_d),
 						format("Vò hån ThuÉn Ph¸p/#take_xp_equip_2(%d,%d, 26)", n_g, n_d),
 						format("Vò hån §ao Ph¸p/#take_xp_equip_2(%d,%d, 27)", n_g, n_d),
+						format("Tiªu Dao cÇm ph¸p/#take_xp_equip_2(%d,%d, 28)", n_g, n_d),
+						format("Tiªu Dao kiÕm ph¸p/#take_xp_equip_2(%d,%d, 29)", n_g, n_d),
 						format("Trang tr­íc/#take_xp_equip_1(%d,%d)", n_g, n_d),
 						"L¸t n÷a quay l¹i /no"});
 end

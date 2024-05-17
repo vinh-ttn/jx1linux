@@ -26,7 +26,7 @@ szStationOp =
 		"§i ®¶o TÈy Tñy/GotoClearSkillMap",	-- 7
 		"§i ®Õn n¬i lµm nhiÖm vô D· TÈu/tl_moveToTaskMap",			-- 8
 		"§i n¬i ®Æc biÖt lµm NhiÖm vô TÝn Sø /messenger_wagoner",      -- 9
-		--"È¥ÎÞÃû¹È/GotoAnonymVale"			--10
+		--"§i V« Danh Cèc/GotoAnonymVale",			--10
 	};
 
 function return_1()
@@ -70,8 +70,10 @@ aryCondition = {
 szStationOp_Cancel = "Kh«ng cÇn ®©u/StationOnCancel";
 
 function go_HSBattle()
-	Msg2Player("Ngåi ch¾c nhÐ! Chóng ta ®i ®Õn Hoa s¬n c¶nh kü tr­êng")
+	Msg2Player("Ngåi ch¾c nhÐ! Chóng ta ®i ®Õn <color=green>Hoa S¬n<color> c¶nh kü tr­êng !")
 	NewWorld(2,2605,3592)
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 	
 end
 
 function WayPointFun()			-- ¼Ó·µ»ØÒª800Á½Òø×Ó£¨¶´¿Ú£©¡¡¡¡¡¡£¨BY£º Dan_Deng 2004-04-30£©
@@ -143,9 +145,11 @@ else
 end;
 
 if (PrePay(nPrice) == 1 or GetCamp() == 6 ) then
-Msg2Player("Ngåi yªn ch­a? Chóng ta ®i "..GetWharfName(nWharfId))
+Msg2Player("Ngåi yªn ch­a? Chóng ta ®i<color=green> "..GetWharfName(nWharfId).."!")
 nW , nX, nY = GetWharfPos(nWharfId);
 nResult = NewWorld(nW, nX , nY );
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 	
 if (nResult == 2) then
 Msg2Player("§ang chuyÓn ®æi Server...")
 end
@@ -194,18 +198,20 @@ function SelStation(nSel)
 	if (PrePay(nPrice) == 1 or GetCamp() == 6) then
 		nW, nX, nY = GetStationPos(nStation);
 		nResult = NewWorld(nW, nX , nY );
-		Msg2Player("Ngåi yªn ch­a? Chóng ta ®i "..GetStationName(nStation))
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
+		Msg2Player("Ngåi yªn ch­a? Chóng ta ®i<color=green> "..GetStationName(nStation).."!")
 		if (nResult == 2) then
 			--Msg2Player("·þÎñÆ÷×ª»»ÖÐ...")
 		end
 		if (nResult == 0) then
 			Msg2Player("NhËp ®iÓm cã sai sãt!")
 		end
-	--§iÒu chØnh reset 5h ch¬i - Modified by NgaVN - 20121015
-	--local nSongJinCount = PlayerFunLib:GetTaskDailyCount(1926)
-	--if nSongJinCount >= 1 or tbCOT_Party:GetDailyTaskCount() >= 1 then
-	SetTireTime(0)
-	--end
+	--§iÒu chØnh reset 5h ch¬i - Modified by DinhHQ - 20110630
+	local nSongJinCount = PlayerFunLib:GetTaskDailyCount(1926)
+	if nSongJinCount >= 1 or tbCOT_Party:GetDailyTaskCount() >= 1 then
+		SetTireTime(0)
+	end
 
 	else
 		Say("Kh«ng tiÒn kh«ng thÓ ngåi xe! ", 0)
@@ -216,7 +222,7 @@ function TownPortalFun()			-- ·µ»ØÒª2000Á½Òø×Ó£¨Ô­µØµã£©¡¡¡¡£¨BY: Dan_Deng 2004-
 --	if (PrePay(2000) == 1 or GetCamp() == 6) then
 		ReturnFromPortal()
 --	else
---		Say("²»ºÃÒâË¼£¬Ã»Ç®¿É×ø²»ÁË³µ£¬Äú»¹ÊÇ×ßÈ¥°É£¡", 0)
+--		Say("ThËt ng¹i kh«ng cã tiÒn th× kh«ng thÓ ®i ®©u ®­îc", 0)
 --	end
 end;
 
@@ -227,17 +233,19 @@ function SelWayPoint(nSel)			-- ·µ»ØÒª1000Á½Òø×Ó£¨¶´¿Ú£©¡¡¡¡¡¡£¨BY£ºDan_Deng 200
 			nW, nX, nY = GetWayPointPos(nWayPoint)
 			nFightState = GetTerminiFState(nWayPoint)
 			nResult = NewWorld(nW, nX, nY)
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 			SetFightState(nFightState)
 --			Msg2Player("Goto"..GetWayPointName(nWayPoint)..nW..nX..nY);
 			if (nResult == 2) then
---				Msg2Player("·þÎñÆ÷×ª»»ÖÐ...")
+--				Msg2Player("Phôc vô khÝ chuyÓn ®æi trung...")
 			end
 			if (nResult == 0) then
---				Msg2Player("´«ÈëµãÓÐ´íÎó.")
+--				Msg2Player("TruyÒn vµo ®iÓm cã sai lÇm.")
 			end
 		end;
 --	else									-- ²»¹»Ç®¾Í¾Ü¾ø
---		Say("²»ºÃÒâË¼£¬Ã»Ç®¿É×ø²»ÁË³µ£¬Äú»¹ÊÇ×ßÈ¥°É£¡", 0);
+--		Say("ThËt ng¹i kh«ng cã tiÒn th× kh«ng thÓ ®i u ®­îc", 0);
 --	end;
 end
 
@@ -282,8 +290,12 @@ function GoCityWarDefend()
 	
 	if (random(0,1) == 1) then
 		NewWorld(222, 1614, 3172);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	else
 		NewWorld(222, 1629, 3193);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	end;
 end;
 
@@ -305,8 +317,12 @@ function GoCityWarAttack()
 	
 	if (random(0,1) == 1) then
 		NewWorld(223, 1614, 3172);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	else
 		NewWorld(223, 1629, 3193);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	end;
 
 end;
@@ -318,16 +334,24 @@ end;
 function GotoDefend()
 if (random(0,1) == 1) then
 	NewWorld(222, 1614, 3172);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 else
 	NewWorld(222, 1629, 3193);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 end;
 end;
 
 function GotoAttack()
 	if (random(0,1) == 1) then
 		NewWorld(223, 1614, 3172);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	else
 		NewWorld(223, 1629, 3193);
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 	end;
 end;
 
@@ -353,6 +377,8 @@ end;
 
 function goto_shijiangu()
 	NewWorld(949, floor(51264 / 32), floor(102368 / 32))
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
 end
 
 function _GoELangGu()
@@ -362,6 +388,8 @@ function _GoELangGu()
 	local nMapId = GetWorldPos()
 	if tbTargetMapList[nMapId] then
  		NewWorld(tbTargetMapList[nMapId], 1592, 3195)
+	SetProtectTime(18*3) --ÈýÃë±£»¤Ê±¼ä
+	AddSkillState(963, 1, 0, 18*3) 
  	end
 end
 
@@ -372,14 +400,14 @@ CITY_OPTIONS =
 	{"Trë l¹i ®Þa ®iÓm cò ",				TownPortalFun}, 		-- 3
 	{"§i Hoa s¬n c¶nh kü tr­êng",			go_HSBattle}, 			-- 4
 	{"§i ChiÕn tr­êng c«ng thµnh",				GoCityWar},				-- 5
-	{"§i chiÕn tr­êng huÊn luyÖn",			GoDemoWar},				-- 6
+	{"§i c«ng thµnh huÊn luyÖn chiÕn tr­êng ",			GoDemoWar},				-- 6
 	{"§i ®¶o TÈy Tñy",				GotoClearSkillMap},		-- 7
 	{"§i ®Õn n¬i lµm nhiÖm vô D· TÈu",		tl_moveToTaskMap},		-- 8
 	{"§i n¬i ®Æc biÖt lµm NhiÖm vô TÝn Sø ",	messenger_wagoner},     -- 9
-	--"È¥ÎÞÃû¹È",				GotoAnonymVale"			--10
+	--{"§i V« Danh C«c",				GotoAnonymVale},			--10
 	{"Xin h·y ®­a ta ®Õn ChiÕn Long §éng",		OnGoToNewLiangShuiDong},-- 10
-	--{"§i ThÝ LuyÖn Cèc",				goto_shijiangu},		-- 11
-	{"§i ¸c Lang Cèc",				_GoELangGu},
+	--{"§i KiÕm Gia Mª Cung",				goto_shijiangu},		-- 11
+	--{"§i ¸c Lang Cèc",				_GoELangGu},
 }
 
 -- ³ÇÊÐ³µ·òÍ¨ÓÃ½Å±¾
@@ -407,8 +435,12 @@ function CityStationCommon(szMsg)
 	tbDailog:Show()
 end;
 
+
 -- ÐÂÊÖ´å³µ·òÍ¨ÓÃ½Å±¾ (×¢Òâ£ºÄÏÔÀÕò²»ÊÇÐÂÊÖ´å£¬²»µ÷´Ëº¯Êý)
 function NewcomerStationCommon(szMsg)
+
+
+
 --	check_update()					-- ¼¼ÄÜ¸üÐÂ¡¢ÃÅÅÉ¼Ó±êÊ¶£¨2004-05-31£©
 	if (GetLevel() >= 5) then
 		if (WhichWarBegin() ~= 0) then
