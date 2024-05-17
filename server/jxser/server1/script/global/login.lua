@@ -61,21 +61,25 @@ tbTop10:LuuDSNhanVat()
 	--tinhpn 20110223:Reset pass ruong
 	ResetBox:AnnounceResetBoxDate()
 
---DisabledStall(1); -- cÊm ngåi b¸n
- 
-if HaveCommonItem(6,1,1266) <1 then
-	tbAwardTemplet:GiveAwardByList({{szName="Phï",tbProp={6,1,1266,1,0},nCount=1,},}, "npctest", 1);
-elseif HaveCommonItem(6,1,438)<1 then
-	tbAwardTemplet:GiveAwardByList({{szName="Phï",tbProp={6,1,438,1,0},nCount=1,},}, "npctest", 1);
-elseif HaveCommonItem(6,1,50000)<1 then
-	tbAwardTemplet:GiveAwardByList({{szName="LÖnh Bµi Test Server",tbProp={6,1,50000,1,0},nCount=1,},}, "npctest", 1);
-end
-
-	if (GetLevel() >= 60) then--xãa skill h?tr?t©n th?		
-		if (GetSkillState(1594) > 0) then
-			RemoveSkillState(1594)
-		end
+	--DisabledStall(1); -- cÊm ngåi b¸n
+	 
+	if HaveCommonItem(6,1,1266) <1 then
+		tbAwardTemplet:GiveAwardByList({{szName="Phï",tbProp={6,1,1266,1,0},nCount=1,},}, "npctest", 1);
+	end	
+	if HaveCommonItem(6,1,438)<1 then
+		tbAwardTemplet:GiveAwardByList({{szName="Phï",tbProp={6,1,438,1,0},nCount=1,},}, "npctest", 1);
 	end
+
+
+	-- Them skill ho tro tan thu
+	if (GetLevel() <= 60) then		
+		AddSkillState(440, 1, 1, 64800*8,1) -- Tiªn Th¶o Lé x2 kn
+		AddSkillState(450, 20, 1, 32400) -- QuÕ Hoa Töu
+		AddSkillState(987, 1, 1, 64800*8,1) -- Mong diep
+
+		Msg2Player("B¹n ®· nhËn ®­îc hç trî t©n thñ ®Æc biÖt d­íi cÊp 60")
+	end
+
 	if (OnlineAward_StartDate() == 1 and OnlineAward_Check_TransferLife() ~= 0) then
 		Msg2Player("§ang trong thêi gian ho¹t ®éng Online NhËn Th­ëng")
 		OnlineAward_ResetDaily()
