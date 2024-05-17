@@ -19,7 +19,7 @@ function Uworld1000_word()
 end
 
 function iwantdotask()
-	do return end
+	--do return end
 	Uworld1000 = nt_getTask(1000)
 	Uworld1001 = nt_getTask(1001)
 	Uworld1002 = nt_getTask(1002)
@@ -32,7 +32,7 @@ function iwantdotask()
 		Say("Hoan nghªnh ng­¬i ®Õn th«n,  cã muèn häc vµi ®iÒu ®Ó tån t¹i trong giang hå kh«ng?",2,"Häc chø!/Uworld1000_goon","Th«i sau nµy h·y nãi./Uworld1000_no")
 	elseif ( Uworld1000 == 40 ) or ( Uworld1000 == 50 ) then 
 		nt_setTask(1000,50) --»·½Ú3start
-		Talk (9,"Uworld1000_good2",name.."<#>: Long thñ lÜnh, Ta ®· t×m Vâ s­ häc vâ xong.","Nhanh thÕ µ?",name.."<#>: Ta ®· th¨ng cÊp råi.","ThÕ tèt, nhÊn F3 më giao diÖn thuéc tİnh, thÊy thanh s¸ng søc m¹nh, th©n ph¸p, néi c«ng, ngo¹i c«ng.",name.."<#>: ThÊy råi.","Søc m¹nh ¶nh h­ëng ®Õn sö dông vò khİ vµ kh¶ n¨ng c«ng kİch ngo¹i c«ng. Mçi lÇn t¨ng 5 ®iÓm søc m¹nh tÊn c«ng c¬ b¶n t¨ng 1 ®iÓm?th©n ph¸p ¶nh h­ëng ®Õn viÖc tÊn c«ng c¬ b¶n ngo¹i c«ng.mçi lÇn t¨ng 5 ®iÓm th©n ph¸p tÊn c«ng c¬ b¶n t¨ng 1 ®iÓm. §ång thêi th©n ph¸p còng ¶nh h­ëng ®Õn kh¶ n¨ng nĞ tr¸nh cña nh©n vËt. mçi lÇn t¨ng 1 ®iÓm th©n ph¸p, Kim Méc Thñy Háa Thæ Thæ ph©n biÖt t¨ng 4 ®iÓm sinh lùc.",name.."<#>: Sao phøc t¹p thÕ?","Ta ®· sím b¶o ng­¬i nhí nhÊn F12 xem th­ ta göi cho ng­¬i, cã g× kh«ng hiÓu nhÊn F1 xem CÈm nang.",name.."<#>: õ, thÕ th× tiÖn lîi h¬n.")
+		Talk (9,"Uworld1000_good2",name.."<#>: Long thñ lÜnh, Ta ®· t×m Vâ s­ häc vâ xong.","Nhanh thÕ µ?",name.."<#>: Ta ®· th¨ng cÊp råi.","ThÕ tèt, nhÊn F3 më giao diÖn thuéc tİnh, thÊy thanh s¸ng søc m¹nh, th©n ph¸p, néi c«ng, ngo¹i c«ng.",name.."<#>: ThÊy råi.","Søc m¹nh ¶nh h­ëng ®Õn sö dông vò khİ vµ kh¶ n¨ng c«ng kİch ngo¹i c«ng. Mçi lÇn t¨ng 5 ®iÓm søc m¹nh tÊn c«ng c¬ b¶n t¨ng 1 ®iÓm? Th©n ph¸p ¶nh h­ëng ®Õn viÖc tÊn c«ng c¬ b¶n ngo¹i c«ng, mçi lÇn t¨ng 5 ®iÓm th©n ph¸p tÊn c«ng c¬ b¶n t¨ng 1 ®iÓm. §ång thêi th©n ph¸p còng ¶nh h­ëng ®Õn kh¶ n¨ng nĞ tr¸nh cña nh©n vËt. Mçi lÇn t¨ng 1 ®iÓm th©n ph¸p, Kim Méc Thñy Háa Thæ Thæ ph©n biÖt t¨ng 4 ®iÓm sinh lùc.",name.."<#>: Sao phøc t¹p thÕ?","Ta ®· sím b¶o ng­¬i nhí nhÊn F12 xem th­ ta göi cho ng­¬i, cã g× kh«ng hiÓu nhÊn F1 xem CÈm nang.",name.."<#>: õ, thÕ th× tiÖn lîi h¬n.")
 	elseif (( Uworld1000 == 60 ) or ( Uworld1000 == 70 )) and ( GetLevel() >= 3 ) then
 		nt_setTask(1000,70) --»·½Ú4start
 		Talk (5,"Uworld1000_high4",name.."<#>: Long thñ lÜnh, ta tù thÊy m×nh cã tiÕn bé.","TiÕn bé? Ng­¬i ra ngoµi chØ lµ lµm måi cho ng­êi ta th«i.",name.."<#>:......","ChiÕn tranh triÒn miªn, hiÓm nguy khã l­êng! NÕu gÆp khã kh¨n h·y t×m c¸c th­¬ng nh©n nh­ chñ d­îc ®iÕm, thî rÌn, chñ t¹p hãa ®Ó häc İt kinh nghiÖm.",name.."<#>:......")	
@@ -50,19 +50,19 @@ function iwantdotask()
 		Talk (7,"Uworld1000_high11","Nhanh thÕ µ? Míi ®©y th«i ®· häc mäi thø ë ta.",name.."<#>: Häc xong råi?","Chí véi mõng, ng­¬i chØ míi ®ñ t­ c¸ch gia nhËp ThËp ®¹i m«n ph¸i trong Vâ l©m.",name.."<#>: ThËp ®¹i m«n ph¸i lµ g×?","Kh«ng thÊy §Ö tö c¸c ph¸i trong th«n sao? KÕt côc Tèng Kim khã ®o¸n, giang hå hiÓm ¸c, c¸c m«n ph¸i ®Òu chiªu mé thªm ®Ö tö ®Ó t¨ng thªm thÕ lùc. Ng­êi trong giang hå th©n bÊt do kû, con ®­êng cña ng­¬i tù quyÕt ®Şnh lÊy.",name.."<#>: Long......Ngò, «ng cßn g× c¨n dÆn g× n÷a kh«ng?.","§­êng xa hiÓm trë, nªn tù b¶o träng. §i t×m §Ö tö tiÕp dÉn NhËp m«n ®i. NhËp m«n xong, t×m npc gióp ®ì lµ cã thÓ t×m ta, nhí ph¶i liªn l¹c víi ta, ta cã chót chuyÖn? Muèn giao cho ng­¬i. Khi kh«ng râ g× vÒ nhiÖm vô nhÊn F12, vÒ thao t¸c nhÊn F1.")
 	elseif ( Uworld1000 == 260 ) or (Uworld1000 == 270 ) then
 		nt_setTask(1000,270) --»·½Ú14start(1)
-		Talk (3,"Uworld1000_good","Ta nghiªm kh¾c víi ng­¬i v× thÊy ng­¬i cã t­ chÊt, hy väng sÏ kh«ng phô lßng ta, vâ c«ng chia lµm néi c«ng vµ ngo¹i c«ng. Thuéc tİnh còngchia lµm hÖ néi c«ng vµ hÖ ngo¹i c«ng.Lóc ng­¬i luyÖn vâ c«ng nªn xem râ.",name.."<#>: Néi c«ng vµ ngo¹i c«ng kh¸c nhau ë ®©u?","Trªn vò khİ cã c¸c thuéc tİnh hç trî cã thÓ t¨ng thªm vâ c«ng cña ng­¬i. NÕu ng­¬i theo néi c«ng th× cã néi b¨ng, néi thñy, néi ®éc. Sau khi c¸c thuéc tİnh cña vò khİ ®­îc ®· kİch ho¹t th× cã thÓ t¨ng thªm. Ngo¹i b¨ng, ngo¹i háa kh«ng gióp g× ng­¬i. Vµ ng­îc l¹i!",name.."<#>:  A! Th× ra lµ thÕ.")	
+		Talk (3,"Uworld1000_good","Ta nghiªm kh¾c víi ng­¬i v× thÊy ng­¬i cã t­ chÊt, hy väng sÏ kh«ng phô lßng ta, vâ c«ng chia lµm néi c«ng vµ ngo¹i c«ng. Thuéc tİnh còng chia lµm hÖ néi c«ng vµ hÖ ngo¹i c«ng. Lóc ng­¬i luyÖn vâ c«ng nªn xem râ.",name.."<#>: Néi c«ng vµ ngo¹i c«ng kh¸c nhau ë ®©u?","Trªn vò khİ cã c¸c thuéc tİnh hç trî cã thÓ t¨ng thªm vâ c«ng cña ng­¬i. NÕu ng­¬i theo néi c«ng th× cã néi b¨ng, néi thñy, néi ®éc. Sau khi c¸c thuéc tİnh cña vò khİ ®­îc ®· kİch ho¹t th× cã thÓ t¨ng thªm. Ngo¹i b¨ng, ngo¹i háa kh«ng gióp g× ng­¬i. Vµ ng­îc l¹i!",name.."<#>:  A! Th× ra lµ thÕ.")	
 	elseif (( Uworld1000 == 280 ) or ( Uworld1000 == 290) ) and ( GetLevel() >= 20 ) then
 		nt_setTask(1000,290) --»·½Ú15start
 		Talk (5,"Uworld1000_high13","T¹i sao l¹i ®Õn, t¹i sao l¹i ®Õn?",name.."<#>:......Ngò Gia, l©u ngµy kh«ng gÆp, «ng ®· giµ nhiÒu råi.","Kim CÈu mÊy ngµy tr­íc ®i qua ®©y, Bµ chñ tiÖm t¹p hãa bŞ......",name.."<#>: Ngò Gia!","Th«i råi, uæng c«ng ta phİ nhiÒu c«ng søc, ®Õn cuèi cïng còng ®¸nh kh«ng l¹i Kim CÈu, ta ®· giµ råi, thÕ giíi nµy lµ cña tuæi trÎ c¸c ng­¬i.")
 	elseif ( Uworld1000 >= 10) and ( Uworld1000 <= 440 ) then
-		Talk (1,"","Phiªu b¹t giang hå rÊt cùc khæ, ng­¬i nªn tù luyÖn tËp thªm. Cã g× kh«ng hiÓu nhÊn<color=red>F12<color>, xem th­ nhiÖm vô.")
+		Talk (1,"","Phiªu b¹t giang hå rÊt cùc khæ, ng­¬i nªn tù luyÖn tËp thªm. Cã g× kh«ng hiÓu nhÊn <color=red>F12<color>, xem th­ nhiÖm vô.")
 	elseif ( Uworld1000 == 1000 ) then
 		Talk(1,"","Giang hå hiÓm ¸c, mäi chuyÖn ng­¬i nªn cÈn thËn. Sau nµy ta kh«ng thÓ lo cho ng­¬i, h·y b¶o träng!")
 	end
 end
 
 function iwantkilltask()
-	do return end
+	--do return end
 	Uworld1000 = nt_getTask(1000)
 	Uworld1067 = nt_getTask(1067)
 	local name = GetName()
@@ -102,8 +102,8 @@ function iwantgetmastertask()
 end
 
 function iwantseetask()
-	Describe(DescLink_LongWu.."<#>:  HÖ thèng nhiÖm vô míi chia thµnh<color=red> s¬ nhËp, chİnh tuyÕn vµ phô tuyÕn<color>.<color=red>NhiÖm vô s¬ nhËp<color>: tÊt c¶ ng­êi ch¬i ®Òu cã thÓ tiÕp nhËn, muc ®İch ®Ó giíi thiÖu nh÷ng ®Æc s¾c vµ thao t¸c trong Vâ L©m TruyÒn Kú. Cã thÓ bá <color=red> nhiÖm vô s¬ nhËp<color>, nh­ng sau nµy sÏ kh«ng thÓ lµm ®­îc.<color=red> NhiÖm vô chñ tuyÕn<color>:  tõ<color=red> cÊp 20<color> ®Õn<color=red> cÊp 60<color>, mçi<color=red> 10 cÊp<color> cã mét nhiÖm vô, gåm 3 phe: <color=red>Chİnh ph¸i, Trung lËp, Tµ ph¸i<color> Ph¶i nhËp m«n míi cã thÓ tiÕp nhËn nhiÖm vô. Sau khi hoµn thµnh sÏ nhËn ®­îc Trang bŞ Hoµng Kim vµ ®iÓm kinh nghiÖm. <color=red> NhiÖm vô phô tuyÕn<color> ph¶i tiÕp nhËn nhiÖm vô t­¬ng øng víi ®¼ng cÊp míi cã thÓ hoµn thµnh, nÕu b¹n muèn tiÕp nhËn nhiÖm vô phô tuyÕn tõ cÊp 30 ®Õn 39, b¹n ph¶i tiÕp nhËn  nhiÖm vô chñ tuyÕn Tµ ph¸i cÊp 30 tr­íc. Khi ®ang lµm nhiÖm vô s¬ nhËp kh«ng thÓ tiÕp nhËn nhiÖm vô phô tuyÕn. Gi¶i th­ëng cña c¸c nhiÖm vô rÊt phong phó, hy väng b¹n cã thÓ ®¾m m×nh vµ th­ëng"
-	.."<color=red> NÕu ng­êi ch¬i míi b­íc vµo thÕ giíi cña trß ch¬i, chóng ta sÏ cho mét ng­êi b¹n ®ång hµnh cïng b¹n phiªu b¹t giang hå. ChØ cÇn nhÊn'ta muèn lµm nhiÖm vô cïng b¹n ®ång hµnh' lµ cã thÓ chän b¹n ®ång hµnh.<color>",1,"KÕt thóc ®èi tho¹i/no")
+	Describe(DescLink_LongWu.."<#>:  HÖ thèng nhiÖm vô míi chia thµnh <color=red>s¬ nhËp, chİnh tuyÕn vµ phô tuyÕn<color>. <color=red>NhiÖm vô s¬ nhËp<color>: TÊt c¶ ng­êi ch¬i ®Òu cã thÓ tiÕp nhËn, muc ®İch ®Ó giíi thiÖu nh÷ng ®Æc s¾c vµ thao t¸c trong Vâ L©m TruyÒn Kú. Cã thÓ bá <color=red> nhiÖm vô s¬ nhËp<color>, nh­ng sau nµy sÏ kh«ng thÓ lµm ®­îc. <color=red> NhiÖm vô chñ tuyÕn<color>:  Tõ <color=red>cÊp 20<color> ®Õn <color=red>cÊp 60<color>, mçi <color=red>10 cÊp<color> cã mét nhiÖm vô, gåm 3 phe: <color=red>Chİnh ph¸i, Trung lËp, Tµ ph¸i<color> Ph¶i nhËp m«n míi cã thÓ tiÕp nhËn nhiÖm vô. Sau khi hoµn thµnh sÏ nhËn ®­îc Trang bŞ Hoµng Kim vµ ®iÓm kinh nghiÖm. <color=red> NhiÖm vô phô tuyÕn<color> ph¶i tiÕp nhËn nhiÖm vô t­¬ng øng víi ®¼ng cÊp míi cã thÓ hoµn thµnh, nÕu b¹n muèn tiÕp nhËn nhiÖm vô phô tuyÕn tõ cÊp 30 ®Õn 39, b¹n ph¶i tiÕp nhËn  nhiÖm vô chñ tuyÕn Tµ ph¸i cÊp 30 tr­íc. Khi ®ang lµm nhiÖm vô s¬ nhËp kh«ng thÓ tiÕp nhËn nhiÖm vô phô tuyÕn. Gi¶i th­ëng cña c¸c nhiÖm vô rÊt phong phó, hy väng b¹n cã thÓ ®¾m m×nh vµ th­ëng thøc"
+	.."<color=red> NÕu ng­êi ch¬i míi b­íc vµo thÕ giíi cña trß ch¬i, chóng ta sÏ cho mét ng­êi b¹n ®ång hµnh cïng b¹n phiªu b¹t giang hå. ChØ cÇn nhÊn 'Ta muèn lµm nhiÖm vô cïng b¹n ®ång hµnh' lµ cã thÓ chän b¹n ®ång hµnh.<color>",1,"KÕt thóc ®èi tho¹i/no")
 end
 
 function Uworld1000_goon()
@@ -119,7 +119,7 @@ function Uworld1000_more() --´Ë´¦Îª20¼¶ÈÎÎñµÄÈë¿ÚÖ®Ò»
 	Uworld186 = nt_getTask(186)
 	Uworld189 = nt_getTask(189)
 	if (( Uworld1001 < 10 ) or ( Uworld1002 < 10 ) or ( Uworld1003 < 10 ))  and ( GetLastFactionNumber() ~= -1 ) then
-	Say("Ng­¬i muèn lµm nhiÖm vô phe nµo?",4,"Phe Chİnh/Uworld1000_camp1","Phe Trung lËp/Uworld1000_camp2","Phe Tµ ph¸i/Uworld1000_camp3","§Ó ta nghÜ l¹i!/Uworld1000_no")
+	Say("Ng­¬i muèn lµm nhiÖm vô phe nµo?",4,"Phe Chİnh ph¸i/Uworld1000_camp1","Phe Trung lËp/Uworld1000_camp2","Phe Tµ ph¸i/Uworld1000_camp3","§Ó ta nghÜ l¹i!/Uworld1000_no")
 	elseif ( HaveCommonItem(6,1,131) > 0 ) then
 		Talk(1,"","Ch¼ng ph¶i ng­¬i ®· nhËn ®­îc tói th­ cña ta µ, mau më ra xem.")
 	elseif ( GetLastFactionNumber() == -1 ) then
@@ -137,7 +137,7 @@ function Uworld1000_camp1()
 	  	nt_setTask(183,10)
 	  	Msg2Player("NhËn ®­îc mét tói th­ cña Long Ngò.")
 	else 
-		Talk(1,"","Ng­¬i ch¼ng ph¶i ®ang lµm nhiÖm vô phe Chİnh sao? T¹i sao cßn muèn lµm n÷a.")
+		Talk(1,"","Ch¼ng ph¶i ng­¬i ®· tiÕp nhËn nhiÖm vô phe Chİnh ph¸i sao? T¹i sao cßn muèn lµm n÷a.")
 	end
 end
 
@@ -149,7 +149,7 @@ function Uworld1000_camp2()
   	nt_setTask(186,10)
   	Msg2Player("NhËn ®­îc mét tói th­ cña Long Ngò.")
   else 
-		Talk(1,"","Ch¼ng ph¶i ng­¬i ®ang lµm nhiÖm vô Phe Trung lËp sao?")
+		Talk(1,"","Ch¼ng ph¶i ng­¬i ®· tiÕp nhËn nhiÖm vô Phe Trung lËp sao? T¹i sao cßn muèn lµm n÷a.")
 	end
 end
 
@@ -161,7 +161,7 @@ function Uworld1000_camp3()
 	  	nt_setTask(189,10)
 	  	Msg2Player("NhËn ®­îc mét tói th­ cña Long Ngò.")
   	else 
-		Talk(1,"","Ch¼ng ph¶i ng­¬i ®· tiÕp nhËn nhiÖm vô Phe Tµ ph¸i sao? T¹i sao muèn lµm n÷a.")
+		Talk(1,"","Ch¼ng ph¶i ng­¬i ®· tiÕp nhËn nhiÖm vô Phe Tµ ph¸i sao? T¹i sao cßn muèn lµm n÷a.")
 	end
 end
 
@@ -171,28 +171,28 @@ end
 
 function Uworld1000_title()
 	local name = GetName()  
-	Talk (4,"Uworld1000_and","Hoan nghªnh ng­¬i ®Õn ®©y, ta lµ tr­ëng th«n. B©y giê bªn ngoµi rÊt hçn lo¹n. Bän giÆc Kim d· man giÕt ng­êi kh«ng chíp m¾t, xa xa cã thÓ nghe thÊy tiÕng vã ngùa, tiÕng g­¬m ®ao lo¶ng xo¶ng. Ban ®ªm m©y mï x¸m xŞt, khãi löa kh¾p n¬i, lßng d©n ho¶ng lo¹n. Ng­¬i ®i ®­êng nhÊt ®Şnh ph¶i cÈn thËn",name.."<#>:  Ta míi ®Õn nªn cã nhiÒu viÖc kh«ng hiÓu, xin ®¹i ca chØ d¹y!","Trong th«n võa më líp d¹y nh÷ng ng­êi trÎ tuæi nh­ ng­êi, häc mét İt còng lµ tèt v× ng­¬i cã thÓ mÊt m¹ng bÊt cø lóc nµo","Cho dï thÕ nµo còng ph¶i cè gi÷ lÊy tİnh m¹ng",name.."<#>:  µ ta cã mét lı t­ëng, ®ã lµ sÏ cã mét ngµy ta.....")
+	Talk (4,"Uworld1000_and","Hoan nghªnh ng­¬i ®Õn ®©y, ta lµ tr­ëng th«n. B©y giê bªn ngoµi rÊt hçn lo¹n. Bän giÆc Kim d· man giÕt ng­êi kh«ng chíp m¾t, xa xa cã thÓ nghe thÊy tiÕng vã ngùa, tiÕng g­¬m ®ao lo¶ng xo¶ng. Ban ®ªm m©y mï x¸m xŞt, khãi löa kh¾p n¬i, lßng d©n ho¶ng lo¹n. Ng­¬i ®i ®­êng nhÊt ®Şnh ph¶i cÈn thËn",name.."<#>:  Ta míi ®Õn nªn cã nhiÒu viÖc kh«ng hiÓu, xin ®¹i ca chØ d¹y!","Trong th«n võa më líp d¹y nh÷ng ng­êi trÎ tuæi nh­ ng­¬i, häc mét İt còng lµ tèt v× ng­¬i cã thÓ mÊt m¹ng bÊt cø lóc nµo","Cho dï thÕ nµo còng ph¶i cè gi÷ lÊy tİnh m¹ng",name.."<#>:  µ ta cã mét lı t­ëng, ®ã lµ sÏ cã mét ngµy ta.....")
 	
 end
 
 function Uworld1000_and()
 	local name = GetName()
 	if( SubWorldIdx2ID( SubWorld ) == 53 ) then  --°ÍÁê
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>209/186<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>209/186<color>.")
 	elseif ( SubWorldIdx2ID( SubWorld ) == 174 ) then  --ÁúÈª´å
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>197/216<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>197/216<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 121 ) then  --ÁúÃÅÕò
-		Talk(1,"","Khoan nãi ®·!! Mau ra ngoµi th«n t×m vâ s­ ®i, tr­íc khi ®i ®¸nh vµi con thó, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>237/239<color>.")
+		Talk(1,"","Khoan nãi ®·!! Mau ra ngoµi th«n t×m Vâ S­ ®i, tr­íc khi ®i ®¸nh vµi con thó, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>237/239<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 153 ) then  --Ê¯¹ÄÕò
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>207/203<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>207/203<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 101 ) then  --µ¾Ïã´å
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>208/184<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>208/184<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 99 ) then   --ÓÀÀÖÕò
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>207/214<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>207/214<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 100 ) then  --ÖìÏÉÕò
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>217/192<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>217/192<color>.")
  	elseif ( SubWorldIdx2ID( SubWorld ) == 20 ) then   --½­½ò´å
-		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m vâ s­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt heo ®­a cho «ng ta. Täa ®é <color=red>454/391<color>.")
+		Talk(1,"","Khoan nãi ®·! Mau ra ngoµi th«n t×m Vâ S­ ®i! Tr­íc ®ã h·y giÕt vµi con heo rõng, lÊy 3 miÕng thŞt t­¬i ®­a cho «ng ta. Täa ®é <color=red>454/391<color>.")
  	end
  	Talk(5,"Uworld1000_find","¤ng Êy rÊt thİch uèng r­îu, ®em chót måi qua, kh«ng chõng sÏ d¹y ng­¬i chót vâ c«ng. §i kh«ng nhanh cã thÓ bÊm nót R ®Ó ch¹y.","Cã thÊy b¶n ®å nhá phİa trªn bªn ph¶i kh«ng?  NÕu kh«ng thÊy nhÊn tab më ra. Phİa trªn cã vŞ trİ,  sè thø nhÊt lµ h­íng §«ng T©y, bªn tr¸i lµ phİa T©y, bªn ph¶i lµ phİa §«ng. Sè thø hai lµ h­íng Nam B¾c, bªn trªn lµ phİa B¾c, ë d­íi lµ phİa Nam.","Cø theo vŞ trİ mµ ®i, phİa d­íi bªn ph¶i b¶n ®å nhá cã vµi biÓu t­îng nhá, ng­¬i xem qua sÏ biÕt. Gi÷ chuét ph¶i chØ vµo b¶n ®å cã thÓ xem c¸c khu vùc khµc. Th«i ta mÖt råi, ng­¬i ®i ®i.",name.."<#>:  HiÓu råi.","§óng råi, sau nµy nÕu kh«ng nhí chuyÖn ta nãi víi ng­¬i, nhÊn <color=red>F12<color>, xem th­ cña ta göi cho ng­¬i sÏ râ.")
 end
@@ -200,7 +200,7 @@ end
 
 function Uworld1000_find()
 	nt_setTask(1000,10) --ÈÃÍæ¼ÒÈ¥ÕÒÎäÊ¦£¬ÈÎÎñ±äÁ¿ÉèÎª10£¬»·½ÚÒ»start
-	Msg2Player("Long Ngò b¶o b¹n ra ngoµi th«n t×m Vâ s­, tr­íc khi ®i h·y ®¸nh thó lÊy ®­îc 3 miÕng thŞt t­¬i.") 
+	Msg2Player("Long Ngò b¶o b¹n ra ngoµi th«n t×m Vâ S­, tr­íc khi ®i h·y ®¸nh heo rõng lÊy 3 miÕng thŞt t­¬i.") 
 	seteducationnpcpos()
 end
 
@@ -216,7 +216,7 @@ Uworld1000 = nt_getTask(1000)
 	if ( Uworld1000 == 50 ) then
 		AddOwnExp(350)						
 		nt_setTask(1000,60) --»·½Ú3end
-		Msg2Player("Long Ngò Ng­¬i ®¹t ®Õn cÊp 3 h·y ®Õn t×m ta")
+		Msg2Player("Long Ngò: Ng­¬i ®¹t ®Õn cÊp 3 h·y ®Õn t×m ta")
 	end
 end
 
@@ -225,19 +225,19 @@ Uworld1000 = nt_getTask(1000)
 	if ( Uworld1000 == 70 ) then
 		AddOwnExp(350)			
 		nt_setTask(1000,80) --»·½Ú4end
-		Msg2Player("Long Ngò b¶o b¹n ®Õn ®èi tho¹i víi Chñ tiÖm t¹p hãa.")
+		Msg2Player("Long Ngò b¶o b¹n ®Õn ®èi tho¹i víi «ng Chñ hiÖu thuèc.")
 		seteducationnpcpos()
 	end
 end
 
 function Uworld1000_high8()
 	nt_setTask(1000,160) --»·½Ú8end
-	Msg2Player("Long Ngò b¶o b¹n ®¹t ®Õn cÊp 5 h·y ®Õn, b©y giê ®Õn gÆp Vâ s­ häc khinh c«ng.")
+	Msg2Player("Long Ngò b¶o b¹n ®¹t ®Õn cÊp 5 h·y ®Õn, b©y giê ®Õn gÆp Vâ S­ häc khinh c«ng.")
 end
 
 function Uworld1000_good3()
 	local name = GetName()
-	Talk(6,"Uworld1000_high9","Trong trß ch¬i b¹n gÆp bÊt cø vÊn ®Ò g× ®Òu cã thÓ th«ng qua c¸ch ®èi tho¹i víi ng­êi ch¬i kh¸c t×m trî gióp. NhÊn<color=red> ctrl<color> dïng chuét chØ vµo ng­êi b¹n muèn ®èi tho¹i lµ cã thÓ ®èi tho¹i. Lóc míi b¾t ®Çu, chØ cã thÓ chän kªnh <Ng­êi ch¬i phô cËn> ®Ó ®èi tho¹i víi ng­êi kh¸c.",name.."<#>:  ¤ng nãi víi ta nhiÒu thÕ ®Ó lµm g×?","Hõ! Thö ®i hái mäi ng­êi xem, mét tªn t«m tĞp cña T©n Thñ th«n nh­ ng­¬i th× cã ®¸ng g×? Ng­¬i t­ëng m×nh lµ ®¹i hiÖp giang hå råi sao?",name.."<#>: ¤ng nãng n¶y qu¸!","H·y ®i t×m Vâ s­, ®õng quªn ®em <color=red>5 miÕng thŞt t­¬i.<color>! Cè g¾ng luyÖn tËp.",name.."<#>:......")
+	Talk(6,"Uworld1000_high9","Trong trß ch¬i b¹n gÆp bÊt cø vÊn ®Ò g× ®Òu cã thÓ th«ng qua c¸ch ®èi tho¹i víi ng­êi ch¬i kh¸c t×m trî gióp. NhÊn <color=red>Ctrl<color> dïng chuét chØ vµo ng­êi b¹n muèn ®èi tho¹i lµ cã thÓ ®èi tho¹i. Lóc míi b¾t ®Çu, chØ cã thÓ chän kªnh <Ng­êi ch¬i phô cËn> ®Ó ®èi tho¹i víi ng­êi kh¸c.",name.."<#>:  ¤ng nãi víi ta nhiÒu thÕ ®Ó lµm g×?","Hõ! Thö ®i hái mäi ng­êi xem, mét tªn t«m tĞp cña T©n Thñ th«n nh­ ng­¬i th× cã ®¸ng g×? Ng­¬i t­ëng m×nh lµ ®¹i hiÖp giang hå råi sao?",name.."<#>: ¤ng nãng n¶y qu¸!","H·y ®i t×m Vâ S­, ®õng quªn ®em theo <color=red>5 miÕng thŞt t­¬i.<color>! Cè g¾ng luyÖn tËp.",name.."<#>:......")
 end
 
 function Uworld1000_high9()
@@ -245,7 +245,7 @@ Uworld1000 = nt_getTask(1000)
 	if ( Uworld1000 == 170 ) then
 		AddOwnExp(800)
 		nt_setTask(1000,180) --»·½Ú9end
-		Msg2Player("Long Ngò muèn b¹n ®i t×m ng­êi nãi chuyÖn, sau ®ã ®i t×m Vâ s­. §õng quªn ®em theo 5 miÕng thŞt t­¬i.")
+		Msg2Player("Long Ngò muèn b¹n ®i t×m ng­êi nãi chuyÖn, sau ®ã ®i t×m Vâ S­. §õng quªn ®em theo 5 miÕng thŞt t­¬i.")
 		seteducationnpcpos()
 	end
 end
@@ -255,7 +255,7 @@ Uworld1000 = nt_getTask(1000)
 	if ( Uworld1000 == 210 ) then
 		AddOwnExp(400)
 		nt_setTask(1000,220) --»·½Ú11end
-		Msg2Player("Long Ngò muèn b¹n ®Õn cÊp 10 míi ®Õn «ng ta.")
+		Msg2Player("Long Ngò muèn b¹n ®Õn cÊp 10 míi ®Õn t×m «ng ta.")
 	end
 end
 
@@ -286,7 +286,7 @@ function Uworld1000_high13()
 	local name = GetName()
 	local curCamp = nt_getCamp();
 	if  ( curCamp == 0 ) then --È±ÉÙÖ§ÏßnpcµÄ×ø±ê
-		Talk(3,"Uworld1000_find2","B¹n h·y ®Õn Phông T­îng t×m Ng¹o V©n T«ng, «ng ta sÏ tiÕp tôc gióp ®ì b¹n",name.."<#>:  Ngò Gia, sau nµy «ng cã dù tİnh g×?","Yªn t©m ®i, hä Long ta kh«ng dÔ chÕt nh­ vËy ®©u, ta cßn ph¶i ®Êu víi bän Kim CÈu tíi cïng!")
+		Talk(3,"Uworld1000_find2","B¹n h·y ®Õn Ph­îng T­êng t×m Ng¹o V©n T«ng, «ng ta sÏ tiÕp tôc gióp ®ì b¹n",name.."<#>:  Ngò Gia, sau nµy «ng cã dù tİnh g×?","Yªn t©m ®i, hä Long ta kh«ng dÔ chÕt nh­ vËy ®©u, ta cßn ph¶i ®Êu víi bän Kim CÈu tíi cïng!")
 	elseif  ( curCamp == 1 ) then --È±ÉÙÖ§ÏßnpcµÄ×ø±ê
 		Talk(3,"Uworld1000_find2","Ng­¬i ®Õn t×m LiÔu Nam V©n, «ng ta sÏ tiÕp tôc gióp ng­¬i! ¤ng ta ë L©m An.",name.."<#>:  Ngò Gia, sau nµy «ng cã dù tİnh g×?","Yªn t©m ®i, hä Long ta kh«ng dÔ chÕt nh­ vËy ®©u, ta cßn ph¶i ®Êu víi bän Kim CÈu tíi cïng!")
 	elseif  ( curCamp == 2 ) then --È±ÉÙÖ§ÏßnpcµÄ×ø±ê

@@ -2,8 +2,7 @@ Include([[\script\event\springfestival07\item\libcracker.lua]]);
 
 GOODSNAME = "Phong ph∏o trung Æ∆c bi÷t";
 FREECELLCOUNT = 1;
-EXPVALUE = 1200;
+EXPVALUE = 120;
 TAB_GOODS = {
-{"TÛi Tinh Ng‰c", 6, 1, 4571, 0},
-{"R≠¨ng hÈ mπch Æ¨n", 6, 1, 4803, 0},
+{"Huy“n Tinh Kho∏ng Thπch c p 5", 6, 1, 147, 5}
 };

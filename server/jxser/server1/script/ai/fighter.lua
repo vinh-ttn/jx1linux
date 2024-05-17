@@ -1,6 +1,6 @@
 IL ("AI")
-ai_time = 0
-ai_totaltime = 0
+ai_time = 10
+ai_totaltime = 10
 
 AI_ATTACKTIME = 10
 ai_doing = 0;

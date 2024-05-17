@@ -20,24 +20,21 @@ function main()
 	if (nExp > nRemained) then
 		nExp = nRemained;
 	end;
-	local str = "B¹n ®· më mét <color=yellow>"..GOODSNAME.."<color>";
-	Msg2Player(str);
+	local str = "B¹n ®· më mét <color=yellow>"..GOODSNAME.."<color>?";
 	if (nExp <= 0) then
 		Say("B¹n ®· nhËn ®­îc <color=yellow>"..EXP_MAXIMUM.."<color> ®iÓm kinh nghiÖm, kh«ng thÓ sö dông ph¸o n÷a!", 0);
 		return 1;
 	end;
 	AddOwnExp(nExp);
-	str = "B¹n nhËn ®­îc <color=yellow>"..nExp.."<color> ®iÓm kinh nghiÖm.";
-	SetTask(4000, GetTask(4000)+EXPVALUE)
-	str = str.."<enter>B¹n nhËn ®­îc <color=yellow>"..EXPVALUE.."<color> ®iÓm Ch©n Nguyªn.";
+	str = str.."B¹n nhËn ®­îc<color=yellow>"..nExp.."<color> ®iÓm kinh nghiÖm.";
 	SetTask(TASKID_TOTALEXP, GetTask(TASKID_TOTALEXP) + nExp);
 	
 	if (TAB_GOODS and getn(TAB_GOODS) > 0) then
 		for i = 1, getn(TAB_GOODS) do
 			AddItem(TAB_GOODS[i][2], TAB_GOODS[i][3], TAB_GOODS[i][4], TAB_GOODS[i][5],0,0,0);
-			str = str.."<enter>B¹n nhËn ®­îc 1 <color=yellow>"..TAB_GOODS[i][1].."<color>.";
+			str = str.."NhËn ®­îc 1 <color=yellow>"..TAB_GOODS[i][1].."<color>.";
 		end;
 	end;
+	CastSkill(764, 3);
 	Msg2Player(str);
-	--CastSkill(764, 3);
 end;

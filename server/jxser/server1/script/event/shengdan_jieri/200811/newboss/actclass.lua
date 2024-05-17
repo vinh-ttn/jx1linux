@@ -17,7 +17,7 @@ function shengdan0811_tbXiaoDaoZeiAct:_init()
 	self.TSK_USE_EXP = 1913
 	
 	self.nActStartDate = 20081205
-	self.nActEndDate = 20090104
+	self.nActEndDate = 20200104
 	self.tbActWeek = {[6] = 1, [0] = 1}
 	self.nBossAppearTime = 1200
 	self.nGetAwardEndTime = 1400

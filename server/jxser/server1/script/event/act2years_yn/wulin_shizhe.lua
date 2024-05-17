@@ -15,7 +15,7 @@
 --ACT2YEARS_YN_MIDCAKE_ID = 1443          --中型月饼
 --ACT2YEARS_YN_SPECIALCAKE_ID = 1444      --特殊月饼
 ACT2YEARS_YN_BEGINTIME = 070825     --活动开始日期
-ACT2YEARS_YN_ENDTIME = 070909       --活动结束日期
+ACT2YEARS_YN_ENDTIME = 120909       --活动结束日期
 --
 --2007越南国庆活动
 GUOQING_YN_TASK_DATE = 1831					--记录领取时期,1.时间(年%y),2.时间(月)，3.时间(日),4.领取次数

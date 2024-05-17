@@ -8,6 +8,6 @@ end
 function GetDesc( nItemIdx )
 	local nCount = GetItemMagicLevel(nItemIdx, 1);
 	local strDesc = "";
-	strDesc = format("<color=yellow>Hån th¹ch nµy cã chøa: <color=green>%d<color> tinh lùc<color>", nCount);
+	strDesc = format("<color=yellow>Trong b¶o r­¬ng cã: <color=green>%d<color> tinh luyÖn th¹ch<color>", nCount);
 	return strDesc;
 end

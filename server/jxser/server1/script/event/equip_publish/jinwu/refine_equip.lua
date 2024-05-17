@@ -3,7 +3,7 @@ Include("\\script\\lib\\composeex.lua")
 Include("\\script\\misc\\eventsys\\type\\npc.lua")
 Include("\\script\\lib\\log.lua")
 Include("\\script\\event\\equip_publish\\jinwu\\equiptable.lua")
-Include("\\script\\event\\equip_publish\\dialog.lua")
+
 
 tbJinWuRefineEquip = tbActivityCompose:new()
 
@@ -84,18 +84,18 @@ function tbJinWuRefineEquip:Compose(nComposeCount)
 		return 0	
 	end
 		
-	local nFreeItemCellLimit = %tbJinWuRefineList[nEquType].nFreeItemCellLimit or 1
+	local nFreeItemCellLimit = tbJinWuRefineList[nEquType].nFreeItemCellLimit or 1
 	
 	nFreeItemCellLimit = ceil(nFreeItemCellLimit * nComposeCount)
 	
-	if %tbJinWuRefineList[nEquType].nWidth ~= 0 and %tbJinWuRefineList[nEquType].nHeight ~= 0 and CountFreeRoomByWH(%tbJinWuRefineList[nEquType].nWidth, %tbJinWuRefineList[nEquType].nHeight, nFreeItemCellLimit) < nFreeItemCellLimit then
-		Say(format("§Ó b¶o ®¶m tµi s¶n cña ®¹i hiÖp, xin h·y ®Ó trèng %d %dx%d hµnh trang", nFreeItemCellLimit, %tbJinWuRefineList[nEquType].nWidth, %tbJinWuRefineList[nEquType].nHeight))
+	if tbJinWuRefineList[nEquType].nWidth ~= 0 and tbJinWuRefineList[nEquType].nHeight ~= 0 and CountFreeRoomByWH(tbJinWuRefineList[nEquType].nWidth, tbJinWuRefineList[nEquType].nHeight, nFreeItemCellLimit) < nFreeItemCellLimit then
+		Say(format("§Ó b¶o ®¶m tµi s¶n cña ®¹i hiÖp, xin h·y ®Ó trèng %d %dx%d hµnh trang", nFreeItemCellLimit, tbJinWuRefineList[nEquType].nWidth, tbJinWuRefineList[nEquType].nHeight))
 		return 0
 	end	
 
-  local tbItem = {szName = "Ngäc Trïng LuyÖn Kim ¤", tbProp = {6,1,3005,1,0,0}, nCount = %tbJinWuRefineList[nEquType].nStone} 
+  local tbItem = {szName = "Ngäc Trïng LuyÖn Kim ¤", tbProp = {6,1,3005,1,0,0}, nCount = tbJinWuRefineList[nEquType].nStone} 
   local nCount = self:CalcItemCount(tbRoomItems, tbItem)
-  if nCount < %tbJinWuRefineList[nEquType].nStone then
+  if nCount < tbJinWuRefineList[nEquType].nStone then
 		local szMsg = self.tbFormula.szFailMsg or "<color=red>Kim ¤ Trïng LuyÖn Ngäc mµ ng­¬i ®Æt vµo kh«ng ®ñ. <color>"
 		Talk(1, "", szMsg)
 		return 0;
@@ -120,45 +120,30 @@ function tbJinWuRefineEquip:Compose(nComposeCount)
 	return 1;
 end
 
---function refine_jinwu()
---		
---	local strDesc = "<npc>½«ĞèÒªÖØÖıµÄ<color=yellow>½ğÎÚ×°±¸<color>ºÍÏàÓ¦ÊıÁ¿µÄ<color=yellow>½ğÎÚÖØÁ·Ê¯<color>·ÅÈëÏÂÃæµÄÎïÆ·À¸"
---	strDesc = strDesc..format("\n\t\t\t\t\t%-29s%s", "½ğÎÚ×°±¸", " ½ğÎÚÖØÁ·Ê¯")
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÍ·¿ø", 1)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÒÂ·ş", 2)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚĞ¬×Ó", 2)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÑü´ø", 1)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚ»¤Íó", 1)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÓñÅå", 2)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÏîÁ´", 2)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚ½äÖ¸", 2)
---	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "½ğÎÚÎäÆ÷", 3)
---	local tbOpt = {}
---	
---	local p = tbJinWuRefineEquip:new(tbMate, "JinWuRefineEquip", INVENTORY_ROOM.room_giveitem)
---	tinsert(tbOpt, {"ÖØÖı½ğÎÚ×°±¸", p.ComposeGiveUI, {p}})
---	tinsert(tbOpt, {"È¡Ïû"})
---	CreateNewSayEx(strDesc, tbOpt);
---end
-local tbMate =	
-{
-	tbMaterial = 
-	{
-		{szName = "Trang bŞ Kim ¤", tbProp = {0, {2055,2084}}, nQuality = 1 },
-		{szName = "Ngäc Trïng LuyÖn Kim ¤", tbProp = {6,1,3005,1,0,0},},
-	},
-	tbProduct = {szName="Trang bŞ Kim ¤", tbProp={0, {2055,2084}}},
-}
-tbJinWuRefineEquip:_init(tbMate, "JinWuRefineEquip", INVENTORY_ROOM.room_giveitem)
-
-
-REFINE_EQUIP_LIST["jinwu"] = {}
-REFINE_EQUIP_LIST["jinwu"].nPak = curpack()
-REFINE_EQUIP_LIST["jinwu"].szOpt = "Trïng luyÖn trang bŞ Kim ¤"
-REFINE_EQUIP_LIST["jinwu"].pFun = tbJinWuRefineEquip.ComposeGiveUI
-REFINE_EQUIP_LIST["jinwu"].pSelf = tbJinWuRefineEquip
-
-
-
-
-
+function refine_jinwu()
+		
+	local strDesc = "<npc>LÊy <color=yellow>trang bŞ Kim ¤ <color> muèn trïng luyÖn  vµ sè l­îng <color=yellow> Kim ¤ Trïng LuyÖn Ngäc<color> t­¬ng øng ®Æt vµo phİa d­íi"
+	strDesc = strDesc..format("\n\t\t\t\t\t%-29s%s", "Trang bŞ Kim ¤", "Kim ¤ Trïng LuyÖn Ngäc")
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Kh«i", 2)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Y Phôc", 3)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Hµi", 3)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Yªu §¸i", 2)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Hé UyÓn", 1)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Ngäc Béi", 3)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ H¹ng Liªn", 1)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Giíi ChØ", 2)
+	strDesc = strDesc..format("\n\t\t\t<color=yellow>%-34s<color=red>%d<color>", "Kim ¤ Vò Khİ", 4)
+	local tbOpt = {}
+	local tbMate =	{
+			tbMaterial = 
+			{
+				{szName = "Trang bŞ Kim ¤", tbProp = {0, {2055,2084}}, nQuality = 1 },
+				{szName = "Ngäc Trïng LuyÖn Kim ¤", tbProp = {6,1,3005,1,0,0},},
+			},
+			tbProduct = {szName="Trang bŞ Kim ¤", tbProp={0, {2055,2084}}},
+		}
+	local p = tbJinWuRefineEquip:new(tbMate, "JinWuRefineEquip", INVENTORY_ROOM.room_giveitem)
+	tinsert(tbOpt, {"Trïng luyÖn trang bŞ Kim ¤", p.ComposeGiveUI, {p}})
+	tinsert(tbOpt, {"Hñy bá "})
+	CreateNewSayEx(strDesc, tbOpt);
+end

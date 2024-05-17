@@ -3,7 +3,7 @@ Include("\\script\\missions\\basemission\\lib.lua")
 IncludeLib("FILESYS")
 tbShenSuanZi = {}
 tbShenSuanZi.nActStartTime =  20100709
-tbShenSuanZi.nActEndTime = 20100816
+tbShenSuanZi.nActEndTime = 20200816
 tbShenSuanZi.lang = {}
 
 

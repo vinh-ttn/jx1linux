@@ -3,7 +3,7 @@ IncludeLib("SETTING")
 IncludeLib("FILESYS"); 
 
 function main()
-	local Talk = "CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô.\nHoµn thµnh nhiÖm vô, ng­¬i sÏ nhËn ®­îc nh÷ng phÇn th­ëng xøng ®¸ng.\nTruy cËp: <color=green>Youtube: PYTA GAMING<color> ®Ó update."
+	local Talk = "CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô.\nHoµn thµnh nhiÖm vô, ng­¬i sÏ nhËn ®­îc nh÷ng phÇn th­ëng xøng ®¸ng."
 	local tb = {
 		"NhiÖm vô Hoµng kim/helpgoldquest",
 	"NhiÖm vô M«n ph¸i/nvmonphai",
@@ -15,7 +15,6 @@ function main()
 return 1
 end
 -----------------------------------NV Th«n TrÊn-----------------------------------------------
------------------------------Youtube: PYTA GAMING---------------------------------------
 tb_HelpThonTran = {
 	[1] = {--Ba L¨ng HuyÖn 
 		[1] = {
@@ -207,7 +206,7 @@ tb_HelpThonTran = {
 
 
 function nvthontran()
-	local Talk = "CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô Th«n trÊn.\nHoµn thµnh nhiÖm vô, ng­¬i sÏ nhËn ®­îc nh÷ng phÇn th­ëng xøng ®¸ng.\nTruy cËp: <color=green>Youtube: PYTA GAMING<color> ®Ó update."
+	local Talk = "CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô Th«n trÊn.\nHoµn thµnh nhiÖm vô, ng­¬i sÏ nhËn ®­îc nh÷ng phÇn th­ëng xøng ®¸ng."
 	local tb = {
 	"Ba L¨ng HuyÖn/#villagequest(1)",
 	"Giang T©n Th«n/#villagequest(2)",
@@ -265,7 +264,6 @@ function villagequest_step3(ID1,ID2,ID3,ID4)
 	SetFightState(FightState)
 end
 ------------------------------------------------------------------------NV M«n Ph¸i-------------------------------------------------------------------------------------------
-------------------------------------------------------------------Youtube: PYTA GAMING----------------------------------------------------------------------------------
 tb_HelpMonPhai = {
 	[0] = { --Thieu lam
 		[1] = {
@@ -1326,7 +1324,7 @@ function help_quest()
 		"Kü n¨ng 120 "..TenMP.."/#help_quest_step1("..nFaction..",9,2,"..getn(tb_HelpMonPhai[nFaction][9])..")",
 		"KÕt thóc ®èi tho¹i/Quit"
 		}
-		Say("CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô M«n Ph¸i.\nTruy cËp: <color=green>Youtube: PYTA GAMING<color> ®Ó update.", getn(tab_Content), tab_Content);
+		Say("CÈm nang ®Æc biÖt gióp dŞch chuyÓn nhanh c¸c ®Şa ®iÓm lµm nhiÖm vô M«n Ph¸i.", getn(tab_Content), tab_Content);
 end
 function help_quest_step1(nFaction,nIDQ,nX,nY)
 	local strDesc = tb_HelpMonPhai[nFaction][nIDQ][1][1]

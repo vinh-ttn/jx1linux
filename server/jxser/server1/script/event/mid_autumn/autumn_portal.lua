@@ -42,7 +42,7 @@ function autumn_enter()
 		end;
 	end;
 	if ( GetPlayerCount() >=700 or cityid <= 0 ) then
-		Describe(WULINMENG_NPC..tab_city[cityid][5].."<#> Tı Æ y Æ’n Minh Nguy÷t tr n r t nguy hi”m! Hay lµ ng≠¨i d0i tı thµnh thﬁ kh∏c vµo Æ„ nh–!", 1, "<#> VÀy cÚng Æ≠Óc! C∂m ¨n!/cancel");
+		Describe(WULINMENG_NPC.."<#> Tı Æ y Æ’n Minh Nguy÷t tr n r t nguy hi”m! Hay lµ ng≠¨i d0i tı thµnh thﬁ kh∏c vµo Æ„ nh–!", 1, "<#> VÀy cÚng Æ≠Óc! C∂m ¨n!/cancel");
 		return
 	end
 	NewWorld(tab_city[cityid][2],tab_city[cityid][3],tab_city[cityid][4]);

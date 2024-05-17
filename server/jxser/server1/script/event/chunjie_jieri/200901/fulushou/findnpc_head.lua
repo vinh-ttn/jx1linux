@@ -62,7 +62,7 @@ TB_CHUNJIE0901_FINDNPC = {
 	TSK_CHUNJIE2009_FLS_MAXEXP = 1940,
 	
 	nDate_Start = 09011612,
-	nDate_Close = 09021520,
+	nDate_Close = 20201520,
 	
 	nMaxExp = 360000000,
 }
@@ -112,7 +112,7 @@ function tbChunjie_Jieri_2009:fulushounpc_main()
 	
 	local nSvrTimeId = tonumber(GetLocalDate("%y%m%d%H"));
 	
-	if (nSvrTimeId < 09011612 or nSvrTimeId > 09021520) then
+	if (nSvrTimeId < 09011612 or nSvrTimeId > 20201520) then
 		CreateTaskSay({"<dec><npc>".."Xin chµo ng­êi phµm trÇn.", "KÕt thóc ®èi tho¹i/OnCancel"});
 		return 0;
 	end
@@ -197,13 +197,13 @@ function tbChunjie_Jieri_2009:fulushounpc_start(ntimeid, nnpc_selfid, nnpc_nexti
 				{szName="ThÇn bÝ kho¸ng th¹ch", tbProp={6,1,398,1,1,0},nRate = 0.5},
 				{szName="Vâ L©m MËt TÞch", tbProp={6,1,26,1,1,0},nRate = 1},
 				{szName="TÈy Tñy Kinh", tbProp={6,1,22,1,1,0},nRate = 1},
---				{szName="¶´²ìÖ®°×½ðµñÁú½ä", nQuality=1, tbProp={0, 143},nRate = 20},
---				{szName="¶´²ìÖ®°×ÓñÇ¬À¤Åå", nQuality=1, tbProp={0, 144},nRate = 20},
---				{szName="¶´²ìÖ®°×½ðÐâ·ï½ä", nQuality=1, tbProp={0, 145},nRate = 20},
---				{szName="¶´²ìÖ®ôä´äÓñÏîÈ¦", nQuality=1, tbProp={0, 146},nRate = 10},
---				{szName="ÉñÃØ¿óÊ¯", tbProp={6,1,398,1,1,0},nRate = 10},
---				{szName="ÎäÁÖÃØ¼®", tbProp={6,1,26,1,1,0},nRate = 10},
---				{szName="Ï´Ëè¾­", tbProp={6,1,22,1,1,0},nRate = 10},
+				{szName="®éng s¸t chi b¹ch kim ®iªu long giíi ", nQuality=1, tbProp={0, 143},nRate = 20}, 
+ 				{szName="§éng s¸t chi b¹ch ngäc kiÒn kh«n béi ", nQuality=1, tbProp={0, 144},nRate = 20}, 
+ 				{szName="§éng s¸t chi b¹ch kim tó ph­îng giíi ", nQuality=1, tbProp={0, 145},nRate = 20}, 
+ 				{szName="§éng s¸t chi phØ thóy ngäc h¹ng quyÓn ", nQuality=1, tbProp={0, 146},nRate = 10}, 
+				{szName="ThÇn bÝ kho¸ng th¹ch", tbProp={6,1,398,1,1,0},nRate = 10}, 
+ 				{szName="Vâ l©m bÝ tÞch", tbProp={6,1,26,1,1,0},nRate = 10}, 
+ 				{szName="TÈy tñy kinh", tbProp={6,1,22,1,1,0},nRate = 10},
 			};
 			tbAwardTemplet:GiveAwardByRate(tbItem, "chunjie_jieri2009_fulushou")
 			

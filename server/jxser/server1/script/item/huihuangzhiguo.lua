@@ -48,11 +48,11 @@ function main(ItemIndex)
 	
 	local award_exp = 0
 	if (huihuangzhiguo_level == 1) then
-		award_exp = 50000
+		award_exp = 500000
 	elseif (huihuangzhiguo_level == 2) then
-		award_exp = 50000
+		award_exp = 2000000
 	elseif (huihuangzhiguo_level == 3) then
-		award_exp = 50000
+		award_exp = 5000000
 	end
 	AddOwnExp(award_exp)
 	SetTask(2313, GetTask(2313) + 1)

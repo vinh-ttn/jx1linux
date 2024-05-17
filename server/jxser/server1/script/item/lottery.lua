@@ -16,9 +16,9 @@ function GetDesc(nItem)
 	nEndMinute = mod( nEndTime, 100 );
 	
 	if (nQId ~= 1000) then 
-		return "<color=Blue>"..GetQuestion(nQId).."\n投:<color=Yellow>"..GetChoose(nQId, nAnswer).."<color>\n".."兑奖截止日期："..nEndMonth.."月"..nEndDay.."日"..format( "%02d", nEndHour )..":"..format( "%02d", nEndMinute );
+		return "<color=Blue>"..GetQuestion(nQId).."\n#:<color=Yellow>"..GetChoose(nQId, nAnswer).."<color>\n".."Th阨 gian i gi秈 thng: "..nEndMonth.."nguy謙 "..nEndDay.."nh藅 "..format( "%02d", nEndHour )..":"..format( "%02d", nEndMinute );
 	else
-		str  = format("<color=Blue> %s\n投: <color=Yellow> 金牌:%d, 银牌:%d, 铜牌:%d <color>", GetQuestion(nQId), GetByte(nAnswer, 1), GetByte(nAnswer, 2), nParam3)
-		return str.."\n兑奖截止日期："..nEndMonth.."月"..nEndDay.."日"..format( "%02d", nEndHour )..":"..format( "%02d", nEndMinute );
+		str  = format("<color=Blue>%s\n#: <color=Yellow>   Kim b礽:%d, Ng﹏ b礽:%d, уng b礽:%d <color>", GetQuestion(nQId), GetByte(nAnswer, 1), GetByte(nAnswer, 2), nParam3)
+		return str.."\nTh阨 gian k誸 th骳 i thng:"..nEndMonth.."nguy謙 "..nEndDay.."nh藅 "..format( "%02d", nEndHour )..":"..format( "%02d", nEndMinute );
 	end;
 end

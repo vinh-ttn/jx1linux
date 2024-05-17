@@ -48,14 +48,17 @@ function main()
 	if (GetNpcParam(nNpcIdx, 2) == GetTask(GREADSEED_SEEDID_TASKID)) then
 		if (nTime >= GetTask(GREADSEED_TIME_TASKID) + 10) then
 			-- ÐÂ¹ûÊµ
-			if (huihuangzhiguo_advance:GetGuoZiAvd() == 0) then
-				-- ¾É¹ûÊµ
+			if (huihuangzhiguo_advance:GetGuoZiAvd() == 0) then				
 				local nItemIndex = AddItem(6,1,904 + nGetSeedLevel - 1,1,0,0,0);
+				if nGetSeedLevel == 1 then
+					SetItemBindState(nItemIndex,-2)
+				end
 				ITEM_SetExpiredTime(nItemIndex, 10080);
 	--			local nowdate = tonumber(GetLocalDate("%y%m%d"))
 	--			SetSpecItemParam(nItemIndex, 1, nowdate)
 				SyncItem(nItemIndex)
 				Msg2Player("B¹n nhËn ®­îc mét qu¶ Huy Hoµng ");
+				
 			end
 			SetTask(GREADSEED_TIME_TASKID, 0);
 			SetTask(GREADSEED_SEEDID_TASKID, 0);

@@ -57,7 +57,7 @@ function yboss()
 	local name = GetName()  
 	if ( Uworld1000 == 80 ) or ( Uworld1000 == 90 ) then
 		nt_setTask(1000,90) --»·½Ú5start
-		Talk(9,"Uworld1000_high5","Kh¸ch quan cÇn g×?",name.."<#>:  Ta kh«ng cã tiÒn, lµ Long thñ lÜnh b¶o  ta ®Õn t×m «ng.","Ngò Gia b¶o ng­¬i ®Õn µ? Ta hiÓu råi! ThËt ra ta còng kh«ng cã g× ®Ó d¹y, tr­íc tiªn tÆng ng­¬i 1 İt d­îc d­îc phÈm, cã lóc h÷u dông",name.."<#>:  C¶m ¬n.","§õng kh¸ch s¸o! Nªn cè g¾ng! BiÕt ®©u sau nµy ng­¬i sÏ trë thµnh mét ®¹i hiÖp, cã chç ®Ó ta n­¬ng nhê'",name.."<#>:  ¤ng kh¸ch s¸o råi.","Sau nµy cã th­¬ng tËt, bÖnh ho¹n g× cø ®Õn t×m ta! NÕu muèn mua sè l­îng lín cã thÓ Ên phİm [shift] vµ nhÊn chuét ph¶i",name.."<#>:  §­îc, ta biÕt råi.","Ng­¬i h·y ®i t×m thî rÌn ® ") 
+		Talk(9,"Uworld1000_high5","Kh¸ch quan cÇn g×?",name.."<#>:  Ta kh«ng cã tiÒn, lµ Long thñ lÜnh b¶o  ta ®Õn t×m «ng.","Ngò Gia b¶o ng­¬i ®Õn µ? Ta hiÓu råi! ThËt ra ta còng kh«ng cã g× ®Ó d¹y, tr­íc tiªn tÆng ng­¬i 1 İt d­îc d­îc phÈm, cã lóc h÷u dông",name.."<#>:  C¶m ¬n.","§õng kh¸ch s¸o! Nªn cè g¾ng! BiÕt ®©u sau nµy ng­¬i sÏ trë thµnh mét ®¹i hiÖp, cã chç ®Ó ta n­¬ng nhê'",name.."<#>:  ¤ng kh¸ch s¸o råi.","Sau nµy cã th­¬ng tËt, bÖnh ho¹n g× cø ®Õn t×m ta! NÕu muèn mua sè l­îng lín cã thÓ Ên phİm [shift] vµ nhÊn chuét ph¶i",name.."<#>:  §­îc, ta biÕt råi.","Ng­¬i h·y ®i t×m thî rÌn ®i") 
 	else 
 		Talk(1,"","Lóc bŞ th­¬ng nhí uèng thuèc, phßng bÖnh h¬n ch÷a bÖnh.")
 	end
@@ -174,7 +174,7 @@ Uworld1000 = nt_getTask(1000)
 	local name = GetName()  
 	if ( Uworld1000 == 340 ) or ( Uworld1000 == 350 ) then 
 		nt_setTask(1000,350) --»·½Ú18start
-		Talk(8,"Uworld1000_goon3","Cuèi cïng ng­¬i còng ®Õn råi",name.."<#>:  ¤ng biÕt ta sÏ ®Õn?","T¹i h¹ vèn cã thÓ ®o¸n ®­îc sè mÖnh, nh©n duyªn tµi léc...th× sao l¹i kh«ng biÕt!",name.."<#>:  Tiªn sinh thËt biÕt ®ïa.","§­îc råi, ta sÏ cho ng­¬i biÕt mét chót vÒ phóc duyªn. Phóc duyªn lµ ph­¬ng thøc tİch lòy 2 giê ch¬i th× cã thÓ ®Õn 7 thµnh lín hoÆc §µo Hoa Nguyªn t×m Vâ L©m TruyÒn Nh©n nhËn l·nh. Sau ®ã ®Õn T­¬ng D­¬ng t×m ThÇn Bİ Th­¬ng Nh©n dïng ®iÓm Phóc duyªn ®æi p",name.."<#> å! Cã chuyÖn ®ã n÷a sao! PhÇn th­ëng cã nhiÒu kh«ng?","Cßn ph¶i hái! Y rÊt giµu cã, giang hå hiÕm cã...",name.."<#>:  VËy cã h¹n chÕ g× kh«ng?");
+		Talk(8,"Uworld1000_goon3","Cuèi cïng ng­¬i còng ®Õn råi",name.."<#>:  ¤ng biÕt ta sÏ ®Õn?","T¹i h¹ vèn cã thÓ ®o¸n ®­îc sè mÖnh, nh©n duyªn tµi léc...th× sao l¹i kh«ng biÕt!",name.."<#>:  Tiªn sinh thËt biÕt ®ïa.","§­îc råi, ta sÏ cho ng­¬i biÕt mét chót vÒ phóc duyªn. Phóc duyªn lµ ph­¬ng thøc tİch lòy 2 giê ch¬i th× cã thÓ ®Õn 7 thµnh lín hoÆc §µo Hoa Nguyªn t×m Vâ L©m TruyÒn Nh©n nhËn l·nh. Sau ®ã ®Õn T­¬ng D­¬ng t×m ThÇn Bİ Th­¬ng Nh©n dïng ®iÓm Phóc duyªn ®æi phÇn th­ëng",name.."<#> å! Cã chuyÖn ®ã n÷a sao! PhÇn th­ëng cã nhiÒu kh«ng?","Cßn ph¶i hái! Y rÊt giµu cã, giang hå hiÕm cã...",name.."<#>:  VËy cã h¹n chÕ g× kh«ng?");
 	end
 end
 

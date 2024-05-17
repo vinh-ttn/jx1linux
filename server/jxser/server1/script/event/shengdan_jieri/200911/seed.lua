@@ -3,7 +3,7 @@ Include("\\script\\event\\shengdan_jieri\\200911\\plant.lua")
 TIME_START	= 1800		-- 活动时间从18:00开始
 TIME_END	= 2300		-- 活动时间在23:00结束
 DATE_START	= 091216	-- 活动开始日期
-DATE_END	= 100125	-- 活动结束日期
+DATE_END	= 200125	-- 活动结束日期
 
 function main()
 	local CurrentDate = tonumber(GetLocalDate("%y%m%d"))

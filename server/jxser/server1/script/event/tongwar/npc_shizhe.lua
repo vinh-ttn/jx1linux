@@ -1,12 +1,11 @@
 --ÎäÁÖµÚÒ»°ïÊ¹Õß
--- ¾ÅÔÂÌìÏÂµÚÒ»°ï µÚÒ»Ãû°ï»á°ïÖ÷¿ÉÒÔµÇ¼Ç×Ô¼ºµÄ¶ÓÓÑ
+-- ¾ÅÔ¢ÌìÏ¢µÚÒ»°ï µÚÒ»Ãû°ï»á°ïÖ÷¿ÉÒÔµÇ¼Ç×Ô¼ºµÄ¶ÓÓÑ
 
-Include("\\script\\event\\tongwar\\head.lua");		--ÌìÏÂµÚÒ»°ïÍ·ÎÄ¼þ
+Include("\\script\\event\\tongwar\\head.lua");		--ÌìÏ¢µÚÒ»°ïÍ·ÎÄ¼þ
 Include("\\script\\task\\system\\task_string.lua");	--¶Ô»°½çÃæÍ·ÎÄ¼þ
 Include("\\script\\global\\titlefuncs.lua");		-- ³ÆºÅ
 
 Include("\\script\\vng_event\\give_support_item.lua")
-Include("\\script\\vng_feature\\thdnb\\baodanh.lua")
 SZONETONG_LGNAME	=	"ONETONG_ONETONG";
 ONETONG_LGTYPE		=	541;
 ONETONG_ACC_LGTYPE	=	542;
@@ -14,11 +13,11 @@ _TB_ONETONG_MEMLIST	=	{-1, {}};
 local SZTONGNAME_ONETONG = "BC";
 local N_TTITLE_ID = 199;
 
-ONETONG_START_SIGNUP	= 20130415						-- ÌìÏÂµÚÒ»°ï¿ªÊ¼µÇ¼ÇÊ±¼ä
-ONETONG_ENDLE_SIGNUP	= 20130421						-- ÌìÏÂµÚÒ»°ï½áÊøµÇ¼ÇÊ±¼ä
+ONETONG_START_SIGNUP	= 20120528						-- ÌìÏ¢µÚÒ»°ï¿ªÊ¼µÇ¼ÇÊ±¼ä
+ONETONG_ENDLE_SIGNUP	= 20200603						-- ÌìÏ¢µÚÒ»°ï½áÊøµÇ¼ÇÊ±¼ä
 
-ONETONG_START_TITLE		= 20100118						-- ÌìÏÂÒ»°ïÁìÈ¡Í·ÏÎ¿ªÊ¼Ê±¼ä
-ONETONG_ENDLE_TITLE		= 20100214						-- ÌìÏÂÒ»°ïÁìÈ¡Í·ÏÎ½áÊøÊ±¼ä
+ONETONG_START_TITLE		= 20100118						-- ÌìÏ¢Ò»°ïÁìÈ¡Í·ÏÎ¿ªÊ¼Ê±¼ä
+ONETONG_ENDLE_TITLE		= 20200214						-- ÌìÏ¢Ò»°ïÁìÈ¡Í·ÏÎ½áÊøÊ±¼ä
 
 ONETONG_MAX_SIGNMEM		= 74
 
@@ -33,7 +32,6 @@ function main()
 					"Xem danh s¸ch thµnh viªn/onetong_showlistmem",
 					"B¸o danh tham gia Thiªn H¹ §Ö NhÊt Bang/onetong_signupmem",
 					"Giao nép vËt phÈm hæ trî Tèng Kim/#GiveSupportItem:OpenUI()",
-					"B¸o danh Thiªn H¹ §Ö NhÊt Bang dµnh cho bang ®¹t top nép lÖnh bµi/#tbTHDNBReg:AddDialog()",
 					"KÕt thóc ®èi tho¹i/OnCancel"});
 		
 	elseif (nDate >= ONETONG_START_TITLE and nDate <= ONETONG_ENDLE_TITLE) then
@@ -112,6 +110,7 @@ function onetong_managemem(szmem, npos)
 end;
 
 function onetong_delonemem(szmem, npos)
+
 	local n_lid = LG_GetLeagueObjByRole(ONETONG_LGTYPE, szmem);
 	if (FALSE(n_lid)) then
 		return
@@ -343,14 +342,6 @@ function onetong_awardtitle()
 	if((nTongID == 0 or nTongID == -1) or szTongName ~= %SZTONGNAME_ONETONG or n_titletype == 1 or GetJoinTongTime() < 10080) then
 		CreateTaskSay({"<dec><npc>".."C¸c h¹ kh«ng phï hîp ®iÒu kiÖn lÜnh th­ëng", "KÕt thóc ®èi tho¹i/OnCancel"});
 		return
-	end
-	
-	--Remove hµo quang VLMC nÕu cã tr­íc khi add hµo quang míi - Modified by DinhHQ - 20110524
-	if Title_GetActiveTitle() == 3000 then
-		Title_RemoveTitle(3000)		
-	end
-	if GetSkillState(1500) ~= -1 then
-		RemoveSkillState(1500)
 	end
 	
 	SetTask(TASK_ACTIVE_TITLE, n_title);

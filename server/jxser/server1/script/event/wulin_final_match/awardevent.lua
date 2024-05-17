@@ -1,7 +1,6 @@
 Include("\\script\\event\\wulin_final_match\\awardhead.lua")
 
 Include("\\script\\task\\task_addplayerexp.lua")  --给玩家累加经验的公共函数
-Include("\\script\\lib\\file.lua")
 
 function wl_get_zonename( clientid )
 	for i = 1, getn( WL_TAB_ZONEINFO ) do
@@ -68,6 +67,22 @@ function GetIniFileData(mapfile, sect, key)
 	end
 end
 
+function GetTabFileHeight(mapfile)
+	if (TabFile_Load(mapfile, mapfile) == 0) then
+		print("Load TabFileError!"..mapfile);
+		return 0
+	end
+	return TabFile_GetRowCount(mapfile) - 1
+end;
+
+function GetTabFileData(mapfile, row, col)
+	if (TabFile_Load(mapfile, mapfile) == 0) then
+		print("Load TabFile Error!"..mapfile)
+		return 0
+	else
+		return tonumber(TabFile_GetCell(mapfile, row + 1, col))
+	end
+end
 
 ------------------------------------------------------------------------------------
 

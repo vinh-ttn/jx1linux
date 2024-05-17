@@ -70,6 +70,31 @@ tbVNEquiptInfo =
 			strType = "Minh Ph­îng (Max Option)",
 			nStartIndex = 4863,
 		},
+	[14] =
+		{
+			strType = "Tinh S­¬ng",
+			nStartIndex = 5379,
+		},
+	[15] =
+		{
+			strType = "NguyÖn KhuyÕt",
+			nStartIndex = 5670,
+		},
+	[16] =
+		{
+			strType = "DiÖu D­¬ng",
+			nStartIndex = 5962,
+		},
+	[17] =
+		{
+			strType = "Anh Hµo",
+			nStartIndex = 6283,
+		},
+	[18] =
+		{
+			strType = "Thiªn MÖnh",
+			nStartIndex = 6808,
+		},
 }
 --chän nh¸nh kü tÊn c«ng chñ ®¹o
 tbVNFactionBranch = 
@@ -180,9 +205,12 @@ tbEquipGroupByFaction = {
 tbVNGetGoldEquip = {}
 
 function tbVNGetGoldEquip:ShowEquipTypeDialog(tbItemProp)
+	dofile("script/vng_feature/getgoldequip.lua")
 	local tbDailog = DailogClass:new()
+	n = getn(tbVNEquiptInfo)
 	tbDailog.szTitleMsg = "Xin chän lo¹i trang bÞ!"
-	for i = 1, getn(tbVNEquiptInfo) do
+	--for i = 1, getn(tbVNEquiptInfo) do
+	for i = 1, n do
 		tbDailog:AddOptEntry("Bé Trang BÞ "..tbVNEquiptInfo[i].strType, self.ShowEquipBranchDialog, {self, i, tbItemProp})
 	end
 	tbDailog:Show()	

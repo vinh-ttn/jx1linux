@@ -31,12 +31,12 @@ end;
 
 function adddiagnpc(szfile, nMapIndex, nItemid, nBegin)
 	local addcount = 0;
-	local count = GetTabFileHeight(szfile);
+	local count = gettabfileheight(szfile);
 	local nCount = 0;
 	
-	for i = nBegin, count, 5 do
-		x = GetTabFileData(szfile, i + 1, 2);
-		y = GetTabFileData(szfile, i + 1, 3);
+	for i = nBegin, count - 1, 5 do
+		x = gettabfiledata(szfile, i + 1, 2);
+		y = gettabfiledata(szfile, i + 1, 3);
 		nItemIdx = DropItem(nMapIndex, x * 32, y * 32, -1, 6, 1, nItemid, 1, 0, 0, 0);
 		nCount = nCount + 1;
 	end;

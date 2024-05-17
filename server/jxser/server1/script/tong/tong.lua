@@ -322,7 +322,7 @@ function MAINTAIN_R(nTongID)
 	local nWeek = TONG_GetWeek(nTongID)
 	local nexweek = nil
 	if (nDay == 0 or tonumber(date("%w")) == 1 or 
-		nDay >= TONG_GetTaskValue(nTongID, TONGTSK_LAST_WM_DAY) + 7) then
+		nDay >= TONG_GetTaskValue(nTongID, TONGTSK_LAST_WM_DAY)) then
 		nexweek = 1
 		TONG_ApplySetTaskValue(nTongID, TONGTSK_LAST_WM_DAY, nDay)
 	end

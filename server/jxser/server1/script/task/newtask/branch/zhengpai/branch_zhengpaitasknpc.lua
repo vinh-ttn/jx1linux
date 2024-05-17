@@ -187,7 +187,7 @@ function branch_hunhun()
 				Describe(DescLink_HunHun.."<#> Ta cho ng­¬i biÕt mét bİ mËt. §· cã ng­êi trong tæ chøc nghe ®­îc chuyÖn Nh¹c Phi bŞ thİch s¸t. Mèi thï gi÷a L©m Uyªn Nhai vµ Nh¹c Phi ai còng biÕt, n¨m ®ã bªn c¹nh Nh¹c Phi kh«ng İt cao thñ b¶o vÖ. Ta còng kh«ng biÕt cã ph¶i ng­êi cña ta giÕt h¾n kh« "
 				..name.."<#>:  T¹i sao ng­¬i l¹i nãi víi ta bİ mËt nµy? <enter>NhiÒu lêi! Ng­¬i t­ëng ta muèn sao? GÇn ®©y ng­êi ®ã ®ét nhiªn mÊt lªn l¹c víi ta. Nghe nãi h¾n ®· ®Õn chiÕn tr­êng Tèng Kim. Ta kh«ng tin h¾n chiÕn ®Êu v× n­íc, hay lµ phiÒn ng­¬i ®Õn ChiÕn tr­êng Tèng Kim mét chuyÕn t×m tung tİch ng­êi nµy tiÖn thÓ lÊy 200 ®iÓm tİch lòy<enter>",
 				1,"KÕt thóc ®èi tho¹i/hunhun3")
-		elseif (( Uworld1053 == 20 ) or ( Uworld1053 == 25 )) and ( Uworld1011 == 20 ) then 
+		elseif (( Uworld1053 == 20 ) or ( Uworld1053 == 25 )) then 
 			if ( GetLevel() >= 50 ) and ( GetLevel() <  60 ) then
 				nt_setTask(1053,25)
 				Describe(DescLink_HunHun.."<#>:  Lµm tèt l¾m, ®iÓm th­ëng ®· lÊy ®ñ.",

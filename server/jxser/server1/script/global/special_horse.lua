@@ -1,19 +1,19 @@
--- special_horse.lua ÂôÌØÊâÂí(80¼¶Âí)µÄNPC½Å±¾
+-- special_horse.lua ¢ôÌØÊâ¢í(80¼¶¢í)µÄNPC½Å±¾
 -- By Dan_Deng(2003-11-10)
 
 function main()
 	UWorld97 = GetTask(97)
-	if (UWorld97 == 10) then		-- ÒÑ¾­Âò¹ı
-		Talk(1,"","Ng­¬i nhÊt ®Şnh ph¶i ®èi ®·i tèt víi ngùa, h»ng ngµy ph¶i t¾m cho nã, b¸nh ®Ëu ph¶i gi· bét cho nhuyÔn... ")
-	elseif (UWorld97 == 1) and (IsTongMaster() == 1) then			-- ¿ÉÒÔÂòÂí
-		Talk(4,"sele_color","VŞ anh hïng nµy xin dõng b­íc ®·. ","Huynh ®µi, cã chuyÖn g× cÇn chØ gi¸o? ","T¹i h¹ ThÈm C©u, hiÖn cã 1 con thiªn lİ m· muèn b¸n, xem vŞ huynh ®µi nµy nhÊt ®Şnh lµ mét ®¹i t«ng s­ cña chİnh ph¸i. Ngùa tèt cña t¹i h¹ thËt kh«ng xÊu hæ khi phôc vô anh hïng. ","§Ó ta xem thö ngùa quı cña huynh,,, ")
-	else
-		Talk(1,"","Thiªn Lı m· kh«ng thiÕu, nh­ng ng­êi biÕt dïng ngùa hái cã mÊy ai!")
+	if (UWorld97 == 10) then		-- ÒÑ¾­¢ò¹ı
+		Talk(1,"","ThÈm C©u : Ng­¬i nhÊt ®Şnh ph¶i thËt tèt ®èi ®·i con ngùa, mçi ngµy cÊp cho nã t¾m, ®Ëu bİnh bªn trong muèn s¶m th­îng tinh mÆt......")
+	elseif (UWorld97 == 1) and (IsTongMaster() == 1) then			-- ¿ÉÒÔ¢ò¢í
+		Talk(4,"sele_color","ThÈm C©u : VŞ nµy anh hïng xin dõng b­íc.","Ng­êi ch¬i : Huynh ®µi cã chuyÖn g× ? ","ThÈm C©u : T¹i h¹ ThÈm C©u, hiÖn d­íi cã mét thÊt ngµn dÆm l­¬ng c©u ra ®Ó cho, nh×n vŞ nµy anh hïng khİ vò bÊt phµm, nhÊt ®Şnh lµ khai t«ng lËp ph¸i ®İch ®¹i t«ng s­, t¹i h¹ ®İch BMW khi kh«ng cã nhôc kh«ng cã anh hïng danh tiÕn. ","Ng­êi ch¬i : ta xem mét chót ng­¬i......") 
+else 
+Talk(1,"","ThÈm C©u : Thiªn lı m· th­êng cã, mµ b¸ nh¹c kh«ng th­êng cã. §å h« ! kh«ng biÕt sao !")
 	end
 end
 
 function sele_color()
-	Say("Anh hïng h·y xem! ",6,"§©y kh«ng ph¶i lµ ¤ V©n §¹p TuyÕt sao! /buy_black","§©y kh«ng ph¶i lµ Xİch Thè B¶o M· sao! /buy_red","§©y kh«ng ph¶i lµ TuyÖt ¶nh sao! /buy_cyan","§©y kh«ng ph¶i lµ §İch L« sao! /buy_yellow","§©y ch¼ng ph¶i lµ ChiÕu D¹ Ngäc S­ Tö sao! /buy_white","§©y lµ ngùa g× vËy? T¹i h¹ hiÓu biÕt cßn kĞm /buy_none")
+	Say("ThÈm C©u : Anh hïng mêi xem :",6,"§©y kh«ng ph¶i lµ ¤ V©n §¹p TuyÕt sao/buy_black","§©y kh«ng ph¶i lµ Xİch Thè sao !/buy_red","§©y kh«ng ph¶i lµ TuyÖt ?nh sao !/buy_cyan","§©y kh«ng ph¶i lµ §İch L« sao!/buy_yellow","§©y kh«ng ph¶i lµ ChiÕu D¹ Ngäc S­ Tö sao !/buy_white","§©y lµ c¸i g× m·, thø cho thİnh h¹ m¾t vông vÒ kh«ng biÕt . /buy_none")
 end
 
 function buy_black()
@@ -37,12 +37,12 @@ function buy_white()
 end
 
 function buy_none()
-	Talk(1,"","NhÊt bang chi chñ, lµ mét nh©n vËt bËc thÇy lµm sao kh«ng biÕt ®©y rèt cuéc lµ ngùa g× chø? Thø lçi, xem ra t¹i h¹ ®· nh×n lÇm ng­êi!")
+	Talk(1,"","ThÈm C©u : §øng ®Çu mét bang , t«ng s­ nh©n vËt nh­ thÕ nµo kh«ng biÕt nh­ thÕ long c©u ? xin lçi, xem ra t¹i h¹ lµ nhËn lÇm ng­êi .")
 end
 
 function the_buy(i)
 	SetTaskTemp(49,i)
-	Say("Kh«ng sai,anh hïng qu¶ nhiªn biÕt nh×n!  T¹i h¹ ®©y còng kh«ng muèn ph¶i b¸n nã,nh­ng hiÖn giê t¹i h¹ cÇn 300 v¹n l­îng b¹c!  Hy väng anh hïng ®èi ®·i tèt víi nã! ",2,"kh«ng sao ®©u, ta nhÊt ®Şnh sÏ ®èi xö tèt víi nã mµ /buy_yes","NhÊt thêi lµm sao t×m ra ®­îc sè tiÒn nµy /buy_no")
+	Say("ThÈm C©u : Kh«ng tÖ, anh hïng qu¶ nhiªn nhËn biÕt ! T¹i h¹ vèn còng kh«ng bá ®­îc v× vËy b¸n nã, nh­ng lµ hiÖn h¹ cÇn 300 v¹n l­îng b¹c , nh×n anh hïng lµ thËt b¸ nh¹c , nhŞn ®au c¾t yªu , ng¾m anh hïng ngµn v¹n h¶o sinh ®èi xö tö tÕ víi nã . ",2,"Kh«ng thµnh vÊn ®Ò, ta nhÊt ®Şnh sÏ kh«ng b¹c ®·i nã /buy_yes","C¸i nµy nhÊt thêi håi l©u ®ang lóc l¹i lªn kia ®i trï sè tiÒn kia ®©y ? /buy_no")
 end
 
 function buy_yes()
@@ -50,13 +50,13 @@ function buy_yes()
 		i = GetTaskTemp(49)
 		Pay(3000000)
 		AddItem(0,10,5,i,0,0,0)
-		SetTask(97,100+i)			-- ±äÁ¿¸³Öµ£¬²¢ÇÒ¼Ç×¡ÂòµÄÊÇÊ²Ã´ÑÕÉ«Âí
-		Talk(1,"","Ngùa ¬i ngùa! Tõ ®©y vÒ sau ng­¬i h·y ®i theo vŞ anh hïng nµy nhĞ, nhÊt ®Şnh ph¶i ngoan ngo·n ®ã!")
-	else
-		Talk(1,"","Ta hiÖn giê trong ng­êi kh«ng mang theo ®ñ ng©n l­îng, huynh t¹m thêi cÇm ®ì sè tiÒn nµy vËy!")
+		SetTask(97,100+i)			-- ±äÁ¿¸³Öµ£¬²¢ÇÒ¼Ç×¡¢òµÄÊÇÊ²Ã´ÑÕÉ«¢í
+		Talk(1,"","ThÈm C©u : Con ngùa nha con ngùa, sau nµy ng­¬i theo vŞ nµy anh hïng, nhÊt ®Şnh ph¶i ngoan ngo·n nha.") 
+else 
+Talk(1,"","Ng­êi ch¬i : Ta trªn ng­êi b©y giê ng©n l­îng mang ph¶i kh«ng ®ñ, ng­¬i th¶ ®îi chót. ")
 	end
 end
 
 function buy_no()
-	Talk(1,"","Kh«ng lÏ sè tiÒn nµy l¹i lµm khã anh hïng sao")
+	Talk(1,"","ThÈm C©u : ThËt ®óng lµ muèn mét v¨n tiÒn lµm khã anh hïng h¸n sao ?")
 end
