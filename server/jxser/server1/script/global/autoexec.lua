@@ -23,6 +23,7 @@ Include("\\script\\event\\jiefang_jieri\\201004\\beat_tiger\\head.lua"); -- —∞ª®
 Include("\\script\\misc\\timeline\\timelinemanager.lua") -- ±º‰÷·
 Include("\\script\\global\\autoexec_head.lua")
 Include("\\script\\activitysys\\npcfunlib.lua")
+
 Include("\\script\\global\\huashan2013\\npc_hoason.lua")
 Include("\\script\\global\\vuhon\\npc_vuhon.lua")
 Include("\\script\\global\\autoexec_npc.lua")
@@ -46,6 +47,7 @@ Include("\\script\\activitysys\\functionlib.lua")
 Include("\\script\\event\\other\\shensuanzi\\class.lua")
 
 Include("\\script\\task\\150skilltask\\g_task.lua")
+Include("\\script\\global\\vinh\\main.lua")
 
 function main()
 
@@ -128,6 +130,8 @@ function main()
     add_npc_vuhon()
 	local szFile = "\\script\\event\\great_night\\great_night_head.lua"
 	DynamicExecute(szFile, "OnGreatNightServerStart")
+	add_npc_vinh()
+
 end;
 
 function load_mission_aexp()
