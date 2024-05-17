@@ -5232,3 +5232,7 @@ BÝ kÝp më r­¬ng 4	6	1	5118	\spr\item\script\item_huangjintupu.spr	38	1	1	BÝ kÝp 
 BÝ kÝp më r­¬ng 5	6	1	5119	\spr\item\script\item_huangjintupu.spr	38	1	1	BÝ kÝp më r­¬ng 5		100	1	0	\script\item\extendbox.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0	5					
 BÝ kÝp më r­¬ng 6	6	1	5120	\spr\item\script\item_huangjintupu.spr	38	1	1	BÝ kÝp më r­¬ng 6		100	1	0	\script\item\extendbox.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0	6					
 LÖnh Bµi Test Game	6	1	5121	\spr\item\songjin\rescript.spr	383	1	1	Like share vµ tham gia FB Héi qu¸n vâ l©m ñng hé team nhÐ <enter> https://fb.com/groups/volamquan		100	1	0	\script\global\eurofun\item\lenhbaitestserver.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0						
+LÖnh bµi SimCity	6	1	15000	\spr\item\songjin\token.spr	38	1	1	LÖnh bµi SimCity		0	1	0	\script\global\vinh\simcity\controllers\main.lua	0	1	1	0	1		100	0	0	0	0	0	0	0	0	0						
+LÖnh bµi kÐo xe	6	1	15001	\spr\item\songjin\token.spr	38	1	1	LÖnh bµi kÐo xe		0	1	0	\script\global\vinh\simcity\controllers\keoxe.lua	0	1	1	0	1		100	0	0	0	0	0	0	0	0	0						
+§Þa ®å nhiÖm vô	6	1	15002	\spr\item\script\wuxuejinyao.spr	38	1	1	§Þa ®å chÝ do c¸c cao thñ ®Ó l¹i		0	1	0	\script\global\vinh\item\bandonhiemvu.lua	0	1	1	0	1		0	0	0	0	0	0	0	0	0	0						
+TruyÒn tèng phï	6	1	15003	\spr\item\script\jinpai_haozhao.spr	38	1	1	T×m kiÕm vµ di chuyÓn ®Õn ®Þa ®iÓm ngay lËp tøc		0	1	0	\script\global\vinh\item\googlemap.lua	0	1	1	0	1		0	0	0	0	0	0	0	0	0	0						
