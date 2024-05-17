@@ -5626,3 +5626,7 @@ LÖnh Bµi TruyÒn Kú	6	1	5240	\spr\item\script\yinghaoling.spr	41	1	1	Mét trong nh
 Tói Ch©n Nguyªn (Nhá)	6	1	5241	\spr\item\script\pingzi\200805\chuntiandalibao.spr	41	1	1	Më ra nhËn ®­îc 5000 Ch©n Nguyªn		100	1	1	\script\item\randomitem.lua	0	1	1	0	0		100	0	0	0	0	0	0	0	0	0	24					
 LÔ Hép Phi Phong cÊp 7	6	1	5242	\spr\item\script\other\jinmalibao.spr	41	1	1	NhÊn chuét ph¶i dïng cã thÓ nhËn ®­îc Phi Phong 10 Sao cÊp 7		0	1	0	\script\item\pifeng_lihe.lua	0	1	1	0	0		500	0	0	0	0	0	0	0	0	0						
 LÖnh Bµi Test Game	6	1	50000	\spr\item\songjin\rescript.spr	383	1	1	Like share vµ tham gia FB Héi qu¸n vâ l©m ñng hé team nhÐ <enter> https://fb.com/groups/volamquan		100	1	1	\script\global\quanlygame\quanlygame.lua	0	1	1	0	0		0	0	0	0	0	0	0	0	0	0						
+LÖnh bµi SimCity	6	1	15000	\spr\item\songjin\token.spr	38	1	1	LÖnh bµi SimCity		0	1	0	\script\global\vinh\simcity\controllers\main.lua	0	1	1	0	1		100	0	0	0	0	0	0	0	0	0						
+LÖnh bµi kÐo xe	6	1	15001	\spr\item\songjin\token.spr	38	1	1	LÖnh bµi kÐo xe		0	1	0	\script\global\vinh\simcity\controllers\keoxe.lua	0	1	1	0	1		100	0	0	0	0	0	0	0	0	0						
+§Þa ®å nhiÖm vô	6	1	15002	\spr\item\script\wuxuejinyao.spr	38	1	1	§Þa ®å chÝ do c¸c cao thñ ®Ó l¹i		0	1	0	\script\global\vinh\item\bandonhiemvu.lua	0	1	1	0	1		0	0	0	0	0	0	0	0	0	0						
+TruyÒn tèng phï	6	1	15003	\spr\item\script\jinpai_haozhao.spr	38	1	1	T×m kiÕm vµ di chuyÓn ®Õn ®Þa ®iÓm ngay lËp tøc		0	1	0	\script\global\vinh\item\googlemap.lua	0	1	1	0	1		0	0	0	0	0	0	0	0	0	0						
